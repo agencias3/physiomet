@@ -101,7 +101,7 @@ class BlogController extends Controller
             }
             $this->SEOService->getPageComplement($post, 'Blog', $cover, $cover);
 
-            $posts = $this->repository->getPostsRecent($post->id, 3);
+            $posts = $this->repository->getPostsRecent($post->id, 2);
             //$tags = $this->tagRepository->orderBy('name', 'asc')->findByField('active', 'y');
 
             return view('site.blog.show', compact('posts', 'post', 'images', 'postTags', 'seoPage'));

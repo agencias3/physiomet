@@ -12,7 +12,7 @@
                 $varClass = $i_0['class'];
             }
             ?>
-            {!! Form::text($i_0['name'], null, ['class' =>' form-control '.$varClass, $varRequired, 'maxlength' => 255]) !!}
+            {!! Form::text($i_0['name'], null, ['class' =>' form-control '.$varClass, $varRequired, 'maxlength' => 191]) !!}
         </div>
     </div>
     <div class="col-md-6">
@@ -28,7 +28,7 @@
                 $varClass = $i_1['class'];
             }
             ?>
-            {!! Form::text($i_1['name'], null, ['class' => 'form-control '.$varClass, $varRequired, 'maxlength' => 255]) !!}
+            {!! Form::text($i_1['name'], null, ['class' => 'form-control '.$varClass, $varRequired, 'maxlength' => 191]) !!}
         </div>
     </div>
 </div>

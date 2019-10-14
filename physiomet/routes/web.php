@@ -30,9 +30,9 @@ Route::group(['namespace' => 'Site'], function () {
 
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('/wesa', 'AboutController@index')->name('about');
+    Route::get('/a-clinica', 'AboutController@index')->name('about');
 
-    Route::get('/produtos', 'ProductController@index')->name('product');
+    Route::get('/servicos', 'ServiceController@index')->name('service');
     Route::get('/produtos/{seo_link}', 'ProductController@category')->name('product.category');
     Route::get('/produtos/{category}/{seo_link}', 'ProductController@show')->name('product.show');
 
@@ -48,9 +48,9 @@ Route::group(['namespace' => 'Site'], function () {
     Route::get('/segmentos-de-negocios', 'BusinessSegmentsController@index')->name('business-segments');
     Route::get('/segmentos-de-negocios/{seo_link}', 'BusinessSegmentsController@show')->name('business-segments.show');
 
-    Route::get('/noticias', 'BlogController@index')->name('blog');
-    Route::get('/noticias/tag/{tag}', 'BlogController@tag')->name('blog.tag');
-    Route::get('/noticias/{seo_link}', 'BlogController@show')->name('blog.show');
+    Route::get('/blog', 'BlogController@index')->name('blog');
+    Route::get('/blog/tag/{tag}', 'BlogController@tag')->name('blog.tag');
+    Route::get('/blog/{seo_link}', 'BlogController@show')->name('blog.show');
 
     Route::get('/contato', 'ContactController@index')->name('contact');
     Route::post('/contato/store', 'ContactController@store')->name('contact.store');

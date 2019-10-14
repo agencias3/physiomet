@@ -27,7 +27,8 @@ class PageItem extends Model implements Transformable
         'page_id',
         'name',
         'order',
-        'active'
+        'active',
+        'description'
     ];
 
     public function page()

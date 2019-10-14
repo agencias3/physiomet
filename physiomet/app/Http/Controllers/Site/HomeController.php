@@ -20,29 +20,17 @@ class HomeController extends Controller
 
     protected $bannerMobileRepository;
 
-    protected $productRepository;
-
-    protected $categoryRepository;
-
-    protected $segmentRepository;
-
     protected $postRepository;
 
     protected $SEOService;
 
     public function __construct(BannerRepository $bannerRepository,
                                 BannerMobileRepository $bannerMobileRepository,
-                                ProductRepository $productRepository,
-                                CategoryRepository $categoryRepository,
-                                SegmentRepository $segmentRepository,
                                 PostRepository $postRepository,
                                 SEOService $SEOService)
     {
         $this->bannerRepository = $bannerRepository;
         $this->bannerMobileRepository = $bannerMobileRepository;
-        $this->productRepository = $productRepository;
-        $this->categoryRepository = $categoryRepository;
-        $this->segmentRepository = $segmentRepository;
         $this->postRepository = $postRepository;
         $this->SEOService = $SEOService;
     }
@@ -54,16 +42,9 @@ class HomeController extends Controller
 
         $banners = $this->bannerRepository->showStore(5);
         $mobile = $this->bannerMobileRepository->showStore(1);
-        $products = $this->categoryRepository->orderBy('order', 'asc')->scopeQuery(function($query){
-            return $query->where('active', 'y');
-        })->paginate(3);
-        $segments = $this->segmentRepository->orderBy('order', 'asc')->scopeQuery(function($query){
-            return $query->where('active', 'y');
-        })->paginate(2);
         $posts = $this->postRepository->getPostsActive(3);
-        //dd($banners);
 
-        return view('site.home.index', compact('seoPage', 'banners', 'products', 'segments', 'posts', 'mobile'));
+        return view('site.home.index', compact('seoPage', 'banners', 'posts', 'mobile'));
     }
 
 }

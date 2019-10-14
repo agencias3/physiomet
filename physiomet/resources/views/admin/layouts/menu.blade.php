@@ -61,6 +61,11 @@
                                     Valores
                                 </a>
                             </li>
+                            <li @if(isset($config['activeMenuN2']) && $config['activeMenuN2'] == 'team')class="active"@endif>
+                                <a href="{{ route('admin.team.index') }}">
+                                    Equipe
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-parent @if(isset($config['activeMenu']) && $config['activeMenu'] == 'tip') nav-expanded nav-active @endif">
