@@ -1,198 +1,130 @@
-<header class="w-100">
+<header class="w-100 p-top-20 p-bottom-20 absolute z-index-8 top-0 left-0 <?php if(Route::getCurrentRoute()->uri() != 'home' && Route::getCurrentRoute()->uri() != '/'){ ?> header-internal<?php } ?>">
 	<div class="center-2">
-		<div class="w-100 d_flex justify-1024-space">
-			<figure class="flex-1 c-left d_flex justify-center main-logo">
-				<a class="max-w-100" href="{{ route('home') }}" title="{{ config('app.name') }}">
+		<article class="w-100 d_flex">
+			<figure class="d_flex self-center c-left main-logo">
+				<a href="" title="">
 					<img class="max-w-100" src="{{ asset('assets/site/images/main-logo.png') }}" title="{{ config('app.name') }}" alt="{{ config('app.name') }}" />
+					<img class="max-w-100 display-none" src="{{ asset('assets/site/images/main-logo-2.png') }}" title="{{ config('app.name') }}" alt="{{ config('app.name') }}" />
 				</a>
 			</figure>
-			<nav class="flex-1 c-left d_flex justify-center main-menu display-1024-none">
-				<ul>
-					<li class="display-none display-1024-block">
-						<a href="javascript:void(0);" onclick="menu()" title="Fechar">
-							<span>
-								<b>
-									Fechar
-								</b>
-							</span>
+			<nav class="d_flex flex-1 justify-center self-center main-menu display-1024-none">
+				<ul class="d_flex wrap c-left">
+					<li class="display-none display-1024-flex">
+						<a href="javascript:void(0);" onclick="menu();" title="FECHAR">
+							FECHAR
 						</a>
 					</li>
 					<li>
-						<a href="{{ route('about') }}" title="Sobre o spot">
-							<span>
-								<b>
-									Sobre o spot
-								</b>
-							</span>
+						<a @if(Route::getCurrentRoute()->uri() == 'home' || Route::getCurrentRoute()->uri() == '/') class="active" @endif href="{{ route('home') }}" title="HOME">
+							HOME
 						</a>
 					</li>
 					<li>
-						<a href="{{ route('store') }}" title="Lojas">
-							<span>
-								<b>
-									Lojas
-								</b>
-							</span>
-							<i>
-								&#9660;
-							</i>
-						</a>
-						<nav>
-							<ul class="b-radius-10">
-								<li>
-									<a href="{{ route('store') }}" title="Ver todas as lojas">
-										Ver todas as lojas
-									</a>
-								</li>
-								<li>
-									<a href="{{ route('segment') }}" title="Ver lojas por segmento">
-										Ver lojas por segmento
-									</a>
-								</li>
-								<li>
-									<a href="{{ route('enterprise') }}" title="Ver lojas por empreendimento">
-										Ver lojas por empreendimento
-									</a>
-								</li>
-							</ul>
-						</nav>
-					</li>
-					<li class="display-none display-1024-block main-bg-1">
-						<a href="{{ route('store') }}" title="Ver todas as lojas">
-							<span>
-								<b>
-									Ver todas as lojas
-								</b>
-							</span>
+						<a @if(Route::getCurrentRoute()->uri() == 'wesa') class="active" @endif href="{{ route('about') }}" title="WESA">
+							WESA 
 						</a>
 					</li>
-					<li class="display-none display-1024-block main-bg-1">
-						<a href="{{ route('segment') }}" title="Ver lojas por segmento">
-							<span>
-								<b>
-									Ver lojas por segmento
-								</b>
-							</span>
+					<li class="relative menu-segment">
+						<a @if(Route::getCurrentRoute()->uri() == 'seguimentos' || Route::getCurrentRoute()->uri() == 'seguimentos/{seo_link}') class="active" @endif href="{{ route('segment') }}" title="SEGMENTOS">
+							SEGMENTOS
 						</a>
+						@inject("segments","\AgenciaS3\Http\Controllers\Site\SegmentController")
+						<?php $menuSegment = $segments->getSegmentActive(); ?>
+						@if(!$menuSegment->isEmpty())
+						<ul class="absolute top-100 left-50">
+							@foreach($menuSegment as $row)
+							<li>
+								<a href="{{ route('segment.show', $row->seo_link) }}" title="{{ $row->name }}">
+									{{ $row->name }}
+								</a>
+							</li>
+							@endforeach
+						</ul>
+						@endif
 					</li>
-					<li class="display-none display-1024-block main-bg-1">
-						<a href="{{ route('enterprise') }}" title="Ver lojas por empreendimento">
-							<span>
-								<b>
-									Ver lojas por empreendimento
-								</b>
-							</span>
+					@if(!$menuSegment->isEmpty())
+						@foreach($menuSegment as $row)
+						<li class="display-none menu-segment">
+							<a href="{{ route('segment.show', $row->seo_link) }}" title="{{ $row->name }}">
+								{{ $row->name }}
+							</a>
+						</li>
+						@endforeach
+					@endif
+					<li class="relative menu-segment">
+						<a @if(Route::getCurrentRoute()->uri() == 'produtos' || Route::getCurrentRoute()->uri() == 'produtos/{seo_link}' || Route::getCurrentRoute()->uri() == 'produtos/{category}/{seo_link}') class="active" @endif href="{{ route('product') }}" title="PRODUTOS">
+							PRODUTOS
+						</a>
+						@inject("categories","\AgenciaS3\Http\Controllers\Site\ProductController")
+						<?php $menuCategory = $categories->getCategoryActive(); ?>
+						@if(!$menuCategory->isEmpty())
+						<ul class="absolute top-100 left-50">
+							@foreach($menuCategory as $row)
+							<li>
+								<a href="{{ route('product.category', $row->seo_link) }}" title="{{ $row->name }}">
+									{{ $row->name }}
+								</a>
+							</li>
+							@endforeach
+						</ul>
+						@endif
+					</li>
+					@if(!$menuCategory->isEmpty())
+						@foreach($menuCategory as $row)
+						<li class="display-none menu-segment">
+							<a href="{{ route('product.category', $row->seo_link) }}" title="{{ $row->name }}">
+								{{ $row->name }}
+							</a>
+						</li>
+						@endforeach
+					@endif
+					<li>
+						<a @if(Route::getCurrentRoute()->uri() == 'noticias' || Route::getCurrentRoute()->uri() == 'noticias/tag/{tag}' || Route::getCurrentRoute()->uri() == 'noticias/{seo_link}') class="active" @endif href="{{ route('blog') }}" title="NOTÍCIAS">
+							NOTÍCIAS
 						</a>
 					</li>
 					<li>
-						<a href="{{ route('faq') }}" title="Dúvidas">
-							<span>
-								<b>
-									dúvidas
-								</b>
-							</span>
+						<a @if(Route::getCurrentRoute()->uri() == 'contato') class="active" @endif href="{{ route('contact') }}" title="CONTATO">
+							CONTATO
 						</a>
 					</li>
-					<li class="bt-contact">
-						<a href="{{ route('contact') }}" title="Contato">
-							<span>
-								<b>
-									Contato
-								</b>
-							</span>
-						</a>
-					</li>
-					<li class="display-none display-1024-block">
-						<a href="{{ route('we-buy-land') }}" title="Outras Oportunidades de Negócio">
-							<span>
-								<b>
-									Outras Oportunidades de Negócio
-								</b>
-							</span>
-						</a>
-					</li>
-					<li class="display-none display-1024-block main-bg-1">
-						<a href="{{ route('invest') }}" title="Invista conosco">
-							<span>
-								<b>
-									Invista conosco
-								</b>
-							</span>
-						</a>
-					</li>
-					<li class="display-none display-1024-block main-bg-1">
-						<a href="{{ route('we-buy-land') }}" title="Compramos seu terreno">
-							<span>
-								<b>
-									Compramos seu terreno
-								</b>
-							</span>
+					<li class="display-none display-1024-flex">
+						<a href="{{ session()->get('configuration')[4]['description'] }}" target="_blank" title="ÁREA DO CLIENTE">
+							ÁREA DO CLIENTE
 						</a>
 					</li>
 				</ul>
 			</nav>
-			<aside class="flex-1 links-top display-1024-none">
-				<a class="b-radius-10" href="{{ route('invest') }}" title="Invista conosco">
-					<div class="w-100 h-100 display-table">
-						<div class="inline">
-							<div class="w-100 t-align-c">
-								<span class="display-inline-block">
-									INVISTA CONOSCO
-								</span>
-							</div>
-						</div>
-					</div>
+			<section class="display-none flex-1 justify-end display-1024-flex">
+				<div class="flex-1 display-none action-menu display-1024-block display-1024-flex">
+					<a class="flex-1 f-left" href="javascript:void(0);" onclick="menu()" title="Menu">
+						<span class="smooth"></span>
+						<span class="smooth"></span>
+						<span class="smooth"></span>
+					</a>
+				</div>
+			</section>
+			<aside class="d_flex wrap display-1024-none">
+				@if(isPost(session()->get('configuration')[4]['description']))
+				<a class="self-center main-bg b-radius-50 bt smooth" target="_blank" href="{{ session()->get('configuration')[4]['description'] }}" title="Área do Cliente">
+					Área do Cliente
 				</a>
-				<a class="b-radius-10 m-left-20-px m-left-1800-10 w-600-50" href="{{ route('we-buy-land') }}" title="Compramos seu terreno">
-					<div class="w-100 h-100 display-table">
-						<div class="inline">
-							<div class="w-100 t-align-c">
-								<span class="display-inline-block">
-									COMPRAMOS<br class="display-1024-none" />
-									SEU TERRENO
-								</span>
-							</div>
-						</div>
-					</div>
-				</a>
+				@endif
+				<form class="self-center m-left-20-px d_flex b-radius-50 overflow-h form-search" id="fSearch" method="get" action="{{ route('blog') }}">
+					<fieldset class="flex-1">
+						<input type="text" name="search" id="search-txt" placeholder="Buscar no site..." />
+					</fieldset>
+					<fieldset class="flex-1">
+						<input class="pointer" type="submit" id="send-search" value="" />
+					</fieldset>
+				</form>
+				@if(isPost(session()->get('configuration')[3]['description']))
+				<p class="self-center m-left-20-px color-white f-w-400 f-size-16">
+					{!! session()->get('configuration')[3]['description'] !!}
+				</p>
+				@endif
 			</aside>
-			<!--aside class="flex-1 d_flex relative display-1024-none bx-opportunity">
-				<a class="flex-1 d_flex justify-center main-bg b-radius-10 bt-opportunity smooth" href="{{ route('we-buy-land') }}" title="Outras oportunidades de Negócio">
-					<span class="t-align-r">
-						Outras oportunidades<br />
-						de Negócio
-					</span>
-					<b class="m-top-8 m-left-20-px">
-						&#9660;
-					</b>
-				</a>
-				<a class="flex-1 d_flex justify-center main-bg b-radius-10 bt-opportunity smooth" href="{{ route('we-buy-land') }}" title="Oportunidades de Negócio">
-					Outras oportunidades<br />
-					de Negócio
-				</a>
-				<nav class="menu-right absolute top-100 right-0 display-none">
-					<ul class="w-100">
-						<li class="w-100">
-							<a class="w-100" href="{{ route('invest') }}" title="Invista conosco">
-								Invista conosco
-							</a>
-						</li>
-						<li class="w-100">
-							<a class="w-100" href="{{ route('we-buy-land') }}" title="Compramos seu terreno">
-								Compramos seu terreno
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</aside-->
-			<div class="flex-1 justify-end display-none action-menu display-1024-block display-1024-flex">
-				<a class="flex-1 f-left" href="javascript:void(0);" onclick="menu()" title="Menu">
-					<span class="smooth"></span>
-					<span class="smooth"></span>
-					<span class="smooth"></span>
-				</a>
-			</div>
-		</div>
+		</article>
 	</div>
 </header>
-<div class="w-100 false-header"></div>
+<?php if(Route::getCurrentRoute()->uri() != 'home' && Route::getCurrentRoute()->uri() != '/'){ ?><div class="w-100 false-header"></div><?php } ?>

@@ -1,39 +1,808 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3162c2df-9c52-4d64-ab91-8b1478935504" name="Default" comment="" />
+    <list default="true" id="3162c2df-9c52-4d64-ab91-8b1478935504" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/physiomet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/physiomet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Application.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Console/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByAddressCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByCategoryCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByCityCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByCodeCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByEmailCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByEnterpriseCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByFromToCreatedAtCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByGroupCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByIdCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByMinMaxDimensionCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByMinMaxPriceCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByNameCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByStateCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Criteria/FindByStoreNameCriteria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Banner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/BannerMobile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Client.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Configuration.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Contact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Enterprise.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/EnterpriseImage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Faq.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/FaqLikeOrNot.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/FormEmail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Keyword.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Newsletter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Page.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/PageImage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/PageItem.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Partner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/PartnerClient.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/PartnerContact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/PartnerProduct.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/PartnerProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/PostImage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/PostTag.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/ProductClient.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/ProductFile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/ProductImage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/ProductText.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Segment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/SegmentClient.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/SegmentImage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/SegmentProduct.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/SeoPage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Store.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/StoreImage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/StoreRelated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/StoreSegment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Tag.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Tip.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/TipItem.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Entities/Work.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Exceptions/Handler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Helpers/Helpers.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Ajax/AddressController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Auth/ForgotPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Auth/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Auth/RegisterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Auth/ResetPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Banner/BannerController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Banner/BannerMobileController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Blog/PostController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Blog/PostImageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Blog/PostTagController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Blog/TagController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Budget/BudgetController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Category/CategoryController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Category/SubCategoryController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Client/ClientController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Configuration/Configuration/ConfigurationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Configuration/Form/FormController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Configuration/Form/FormEmailController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Configuration/Keyword/KeywordCheckController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Configuration/Keyword/KeywordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Configuration/Page/PageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Configuration/Page/PageImageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Configuration/Page/PageItemController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Configuration/SeoPage/SeoPageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Configuration/User/UserController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Configuration/User/UserPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Construction/ConstructionController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Construction/ConstructionImageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Contact/ContactController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Driver/DriverAdvantageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Driver/DriverContactController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Driver/DriverTestimonyController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Driver/RequirementDriverController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Enterprise/EnterpriseController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Enterprise/EnterpriseImageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Faq/FaqController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/LandingPage/LandingPageConfigurationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/LandingPage/LandingPageContactController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/LandingPage/LandingPageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/LandingPage/LandingPageProductController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Machine/CategoryMachineController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Machine/MachineController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Machine/MachineFileController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Machine/MachineImageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Modality/ModalityController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/NewsletterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/NotificationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Part/CategoryPartController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Part/PartContactController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Part/PartController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Partner/PartnerController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Passenger/PassengerContactController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Product/ProductClientController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Product/ProductController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Product/ProductFileController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Product/ProductImageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Product/ProductTextController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Segment/SegmentClientController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Segment/SegmentController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Segment/SegmentImageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Segment/SegmentProductController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/SeoPageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Service/ServiceContactController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Service/ServiceController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Service/ServiceItemController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Service/ServiceProcessController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Store/StoreController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Store/StoreImageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Store/StoreRelatedController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Store/StoreSegmentController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/TechnicalAssistance/ComponentController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/TechnicalAssistance/DefectController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/TechnicalAssistance/FluidController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/TechnicalAssistance/TechnicalAssistanceController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/TechnicalAssistance/TypeProductController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/TimeLine/TimeLineController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Tip/TipController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Tip/TipItemController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/TradingPartner/TradingPartnerContactController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/TradingPartner/TradingPartnerTestimonyController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/TradingPartnerRestrict/CategoryController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/TradingPartnerRestrict/FileController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/TradingPartnerRestrict/TradingPartnerController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/TradingPartnerRestrict/TradingPartnerPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Admin/Work/WorkController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/AboutController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/AdministrationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/Ajax/AddressController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/BlogController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/BudgetController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/BusinessSegmentsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/ClientController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/ConfigurationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/ConstructionController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/ContactController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/EnterpriseController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/FaqController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/InvestController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/MachineController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/NewsletterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/PageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/PartController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/PartnerController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/ProductController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/SegmentController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/SiteMapController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/StoreController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/TechnicalAssistanceController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/TipController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/WeBuyLandController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Controllers/Site/WorkController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Kernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Middleware/OperatorPatnerRedirectlAuthenticated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Requests/AdminRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Http/Requests/SiteRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/Site/Contact/ContactClientMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/Site/Contact/ContactMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/Site/Newsletter/NewsletterClientMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/Site/Newsletter/NewsletterMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/Site/Part/PartClientMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/Site/Part/PartMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/Site/Partner/PartnerClientMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/Site/Partner/PartnerMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/Site/TechnicalAssistance/TechnicalAssistanceClientMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/Site/TechnicalAssistance/TechnicalAssistanceMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/Site/Work/WorkClientMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/Site/Work/WorkMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/User/UserCreatedMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Mail/User/UserNewPasswordMail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Notifications/Admin/ResetPasswordNotification.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Providers/AppServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Providers/AuthServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Providers/EventServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Providers/RepositoryServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Providers/RouteServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/BannerMobileRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/BannerMobileRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/BannerRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/BannerRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/CategoryRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/CategoryRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ClientRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ClientRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ConfigurationRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ConfigurationRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ContactRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ContactRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/EnterpriseImageRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/EnterpriseImageRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/EnterpriseRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/EnterpriseRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/FaqLikeOrNotRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/FaqLikeOrNotRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/FaqRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/FaqRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/FormEmailRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/FormEmailRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/FormRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/FormRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/KeywordRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/KeywordRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/NewsletterRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/NewsletterRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PageImageRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PageImageRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PageItemRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PageItemRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PageRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PageRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PartnerClientRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PartnerClientRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PartnerContactRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PartnerContactRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PartnerProductRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PartnerProductRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PartnerProviderRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PartnerProviderRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PartnerRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PartnerRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PostImageRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PostImageRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PostRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PostRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PostTagRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/PostTagRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ProductClientRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ProductClientRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ProductFileRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ProductFileRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ProductImageRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ProductImageRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ProductRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ProductRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ProductTextRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/ProductTextRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/SegmentClientRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/SegmentClientRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/SegmentImageRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/SegmentImageRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/SegmentProductRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/SegmentProductRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/SegmentRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/SegmentRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/SeoPageRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/SeoPageRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/StoreImageRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/StoreImageRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/StoreRelatedRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/StoreRelatedRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/StoreRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/StoreRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/StoreSegmentRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/StoreSegmentRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/TagRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/TagRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/TipItemRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/TipItemRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/TipRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/TipRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/UserRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/UserRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/WorkRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Repositories/WorkRepositoryEloquent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Services/SEOService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Services/UtilObjeto.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/BannerMobileValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/BannerValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/CategoryValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/ClientValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/ConfigurationValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/ContactValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/EnterpriseImageValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/EnterpriseValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/FaqLikeOrNotValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/FaqValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/FormEmailValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/FormValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/KeywordValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/NewsletterValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/PageImageValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/PageItemValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/PageValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/PartContactValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/PartValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/PartnerClientValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/PartnerContactValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/PartnerProductValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/PartnerProviderValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/PartnerValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/PostImageValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/PostTagValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/PostValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/ProductClientValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/ProductFileValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/ProductImageValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/ProductTextValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/ProductValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/SegmentClientValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/SegmentImageValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/SegmentProductValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/SegmentValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/SeoPageValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/StoreImageValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/StoreRelatedValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/StoreSegmentValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/StoreValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/TagValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/TipItemValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/TipValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/UserValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/app/Validators/WorkValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/bootstrap/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/bootstrap/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/broadcasting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/debugbar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/filesystems.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/queue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/repository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/seotools.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/services.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/config/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/factories/PostFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/factories/PostTagFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/factories/TagFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/factories/UserFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2018_04_23_003918_create_configurations_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2018_08_03_203440_create_forms_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2018_08_03_203505_create_form_emails_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2018_08_03_203531_create_newsletters_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2018_08_03_214315_create_pages_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2018_08_04_170115_create_page_images_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_05_31_142412_create_banners_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_05_31_142422_create_banner_mobiles_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_05_31_153007_create_seo_pages_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_06_06_094659_create_tags_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_06_06_094708_create_posts_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_06_06_094715_create_post_images_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_06_06_094724_create_post_tags_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_06_06_094853_create_keywords_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_06_06_173314_create_contacts_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_08_26_211539_create_page_items_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_16_183626_create_tips_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_16_183855_create_tip_items_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_17_132657_create_products_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_17_143113_create_product_images_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_17_143148_create_product_files_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_17_145644_create_product_texts_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_17_165514_create_segments_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_17_165609_create_segment_images_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_18_090154_create_clients_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_18_093125_create_segment_clients_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_18_104138_create_segment_products_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_18_114656_create_product_clients_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_19_101123_create_works_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_25_120614_create_partners_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_25_152854_create_partner_contacts_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_25_160251_create_partner_products_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_25_160259_create_partner_clients_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/migrations/2019_09_25_160327_create_partner_providers_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/seeds/DatabaseSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/seeds/PostTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/seeds/PostTagTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/seeds/TagTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/database/seeds/UsersTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/assets/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/assets/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/assets/js/components/ExampleComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/assets/sass/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/assets/sass/app.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/lang/en/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/lang/en/pagination.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/lang/en/passwords.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/lang/en/validation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/lang/pt/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/lang/pt/messages.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/lang/pt/pagination.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/lang/pt/passwords.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/lang/pt/validation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/auth/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/auth/passwords/email.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/auth/passwords/reset.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/banner/desktop/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/banner/desktop/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/banner/desktop/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/banner/desktop/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/banner/mobile/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/banner/mobile/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/banner/mobile/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/banner/mobile/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/post/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/post/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/post/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/post/gallery/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/post/inc/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/post/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/post/service/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/post/service/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/post/tag/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/post/tag/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/tag/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/tag/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/tag/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/blog/tag/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/budget/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/budget/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/budget/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/category/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/category/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/category/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/category/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/category/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/client/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/client/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/client/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/client/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/configuration/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/configuration/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/configuration/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/configuration/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/form/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/form/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/form/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/form/email/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/form/email/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/form/inc/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/form/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/keyword/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/keyword/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/keyword/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/keyword/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/keyword/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/page/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/page/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/page/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/page/gallery/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/page/inc/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/page/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/page/item/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/page/item/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/page/item/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/page/item/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/seo-page/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/seo-page/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/seo-page/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/seo-page/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/user/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/user/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/user/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/user/inc/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/user/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/user/password/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/configuration/user/password/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/construction/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/construction/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/construction/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/construction/gallery/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/construction/inc/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/construction/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/contact/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/contact/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/contact/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/enterprise/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/enterprise/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/enterprise/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/enterprise/gallery/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/enterprise/inc/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/enterprise/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/faq/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/faq/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/faq/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/faq/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/home/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/configuration/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/configuration/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/configuration/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/configuration/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/contact/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/contact/all.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/contact/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/contact/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/inc/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/product/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/product/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/product/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/landing-page/product/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/_msg.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/_page_header.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/app.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_active.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_active_date_datepublish.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_active_featured_order.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_active_hour.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_active_order.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_active_year.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_address_link_google_maps.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_color.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_datasheet.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_description.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_description_text.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_description_textarea.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_district_phone.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_email_phone_cell_phone.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_file.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_form_seo_description.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_form_seo_keywords.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_form_seo_keywords_description.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_group_address_text.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_image.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_input_text_12.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_input_text_4_4_4.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_input_text_6_6.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_input_text_select_6_6.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_link.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_link_google_maps.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_name.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_name_active.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_name_select_pluck.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_office_type.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_resume.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_script.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_script_body.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_seo_keywords_description.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_seo_link.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_state_city.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_sub_name.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_target_link.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_target_link_url.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_video.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/forms/_video_mp4_ogg.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/header.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/layouts/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/category/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/category/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/category/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/category/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/machine/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/machine/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/machine/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/machine/file/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/machine/file/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/machine/file/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/machine/file/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/machine/gallery/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/machine/inc/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/machine/machine/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/modals/_delete.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/modals/_gallery.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/newsletter/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/newsletter/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/part/category/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/part/category/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/part/category/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/part/category/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/part/contact/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/part/contact/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/part/contact/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/part/part/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/part/part/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/part/part/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/part/part/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/partner/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/partner/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/partner/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/client/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/client/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/file/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/file/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/file/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/file/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/gallery/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/inc/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/text/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/text/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/text/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/product/text/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/segment/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/segment/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/segment/client/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/segment/client/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/segment/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/segment/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/segment/gallery/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/segment/inc/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/segment/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/segment/product/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/segment/product/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/store/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/store/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/store/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/store/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/store/gallery/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/store/inc/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/store/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/store/related/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/store/related/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/store/segment/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/store/segment/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/component/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/component/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/component/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/component/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/defect/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/defect/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/defect/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/defect/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/fluid/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/fluid/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/fluid/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/fluid/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/technical-assistance/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/technical-assistance/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/technical-assistance/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/type-product/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/type-product/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/type-product/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/technical-assistance/type-product/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/time-line/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/time-line/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/time-line/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/time-line/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/tip/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/tip/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/tip/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/tip/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/tip/inc/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/tip/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/tip/item/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/tip/item/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/tip/item/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/tip/item/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/work/_form_filter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/work/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/admin/work/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-about/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-blog/_li_list.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-blog/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-blog/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-contact/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-contact/_info.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-contact/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-home/banner.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-home/blog.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-home/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-home/product.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-home/segment.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-home/tip.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-product/category.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-product/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-product/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-segment/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/-segment/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/about/_video.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/about/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/administration/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/blog/_li_list.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/blog/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/blog/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/business-segments/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/contact/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/contact/_info.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/contact/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/enterprise/-index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/enterprise/_list.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/enterprise/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/enterprise/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/enterprise/stores.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/faq/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/invest/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/layouts/-header.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/layouts/_form_newsletter.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/layouts/_gallery.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/layouts/_header_page.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/layouts/_shareds.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/layouts/app.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/layouts/bread-crumbs.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/layouts/footer.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/layouts/header.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/segment/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/segment/segmento.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/segment/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/segment/stores.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/store/_form_search.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/store/_list.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/store/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/store/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/_old/we-buy-land/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/about/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/backup/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/blog/_li_list.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/blog/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/blog/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/contact/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/contact/_info.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/contact/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/home/banner.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/home/blog.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/home/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/home/product.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/home/segment.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/home/tip.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/layouts/app.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/layouts/footer.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/layouts/header.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/partner/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/partner/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/product/category.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/product/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/product/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/segment/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/segment/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/work/_form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/site/work/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/sitemap/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/inc/footer.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/inc/header.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/inc/sub_copy.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/site/contact/admin.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/site/contact/client.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/site/newsletter/admin.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/site/newsletter/client.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/site/partner/admin.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/site/partner/client.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/site/work/admin.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/site/work/client.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/users/created.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/users/new_password.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/resources/views/vendor/emails/users/reset_password.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/routes/admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/routes/api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/routes/channels.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/routes/console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/physiomet/routes/web.php" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/physiomet/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/physiomet/app/Http/Requests/SiteRequest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/physiomet/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="55" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -59,14 +828,107 @@
         <option value="$PROJECT_DIR$/assets/site/scss/slick.scss" />
         <option value="$PROJECT_DIR$/clinica.php" />
         <option value="$PROJECT_DIR$/assets/site/scss/style.scss" />
+        <option value="$PROJECT_DIR$/physiomet/config/seotools.php" />
+        <option value="$PROJECT_DIR$/physiomet/routes/admin.php" />
+        <option value="$PROJECT_DIR$/www/physiomet/index.php" />
         <option value="$PROJECT_DIR$/physiomet/.env" />
       </list>
     </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/physiomet/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/mtdowling/cron-expression" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/thanks" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/kylekatarnls/update-helper" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/renatomarinho/laravel-page-speed" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/composer" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/artesaos/seotools" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/prettus/laravel-validation" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/prettus/l5-repository" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/physiomet/vendor/sebastian/object-reflector" />
+    </include_path>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/php.xml" />
       </list>
     </option>
   </component>
@@ -82,6 +944,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -93,6 +956,45 @@
               <item name="physiomet" type="b2602c69:ProjectViewProjectNode" />
               <item name="physiomet" type="462c0819:PsiDirectoryNode" />
               <item name="physiomet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="physiomet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="physiomet" type="462c0819:PsiDirectoryNode" />
+              <item name="physiomet" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="physiomet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="physiomet" type="462c0819:PsiDirectoryNode" />
+              <item name="physiomet" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="physiomet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="physiomet" type="462c0819:PsiDirectoryNode" />
+              <item name="physiomet" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="physiomet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="physiomet" type="462c0819:PsiDirectoryNode" />
+              <item name="physiomet" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="physiomet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="physiomet" type="462c0819:PsiDirectoryNode" />
+              <item name="physiomet" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="physiomet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="physiomet" type="462c0819:PsiDirectoryNode" />
+              <item name="physiomet" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="physiomet" type="b2602c69:ProjectViewProjectNode" />
@@ -109,7 +1011,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -125,16 +1026,17 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Projetos\DESENV\physiomet\www\physiomet\font-end" />
-      <recent name="E:\Projetos\DESENV\physiomet\www\physiomet" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Projetos\DESENV\physiomet" />
       <recent name="E:\Projetos\DESENV\physiomet\assets\site\images" />
       <recent name="C:\projetos\physiomet\assets\site\fonts" />
       <recent name="C:\projetos\physiomet\uploads\banner" />
       <recent name="C:\projetos\physiomet\uploads\page" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projetos\DESENV\physiomet\physiomet\resources\views\site\_old" />
+      <recent name="E:\Projetos\DESENV\physiomet\www\physiomet\font-end" />
+      <recent name="E:\Projetos\DESENV\physiomet\www\physiomet" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -162,20 +1064,20 @@
       <workItem from="1569521465889" duration="10442000" />
       <workItem from="1569587471162" duration="19227000" />
       <workItem from="1569845074435" duration="132000" />
-      <workItem from="1570563452824" duration="2179000" />
+      <workItem from="1570563452824" duration="4743000" />
+      <workItem from="1571074096943" duration="3193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31980000" />
+    <option name="totallyTimeSpent" value="37737000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="81" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17857143" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2857143" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="File Transfer" weight="0.32910052" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
@@ -188,10 +1090,11 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32910052" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.26560846" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.23720682" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -199,95 +1102,22 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/site/scss/responsive.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2822">
-          <caret line="166" column="3" lean-forward="true" selection-start-line="166" selection-start-column="3" selection-end-line="166" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/site/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/site/scss/responsive.scss" />
+    <entry file="file://$PROJECT_DIR$/assets/site/js/main.js" />
     <entry file="file://$PROJECT_DIR$/uploads/blog/news-2.jpg" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa9740.19297/stylesheet.css" />
-    <entry file="file://$PROJECT_DIR$/assets/site/css/slick.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/site/images/social-7.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/site/images/social-8.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inc/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/site/js/plugins/slick/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/site/scss/slick.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="30" column="157" selection-start-line="30" selection-start-column="157" selection-end-line="30" selection-end-column="157" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/site/scss/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="324" column="41" selection-start-line="324" selection-start-column="41" selection-end-line="324" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinica.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="138" column="69" selection-start-line="138" selection-start-column="69" selection-end-line="138" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="39" column="71" lean-forward="true" selection-start-line="39" selection-start-column="71" selection-end-line="40" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/site/scss/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="39" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/site/scss/mixin.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/site/css/slick.css" />
+    <entry file="file://$PROJECT_DIR$/inc/footer.php" />
+    <entry file="file://$PROJECT_DIR$/assets/site/images/social-7.png" />
+    <entry file="file://$PROJECT_DIR$/assets/site/images/social-8.png" />
+    <entry file="file://$PROJECT_DIR$/inc/header.php" />
+    <entry file="file://$PROJECT_DIR$/assets/site/js/plugins/slick/scripts.js" />
+    <entry file="file://$PROJECT_DIR$/assets/site/scss/slick.scss" />
+    <entry file="file://$PROJECT_DIR$/assets/site/scss/style.scss" />
+    <entry file="file://$PROJECT_DIR$/clinica.php" />
+    <entry file="file://$PROJECT_DIR$/index.php" />
+    <entry file="file://$PROJECT_DIR$/assets/site/scss/main.scss" />
+    <entry file="file://$PROJECT_DIR$/assets/site/scss/mixin.scss" />
     <entry file="file://$PROJECT_DIR$/physiomet/app/Http/Requests/SiteRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -295,10 +1125,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/physiomet/config/seotools.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/physiomet/routes/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/physiomet/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/physiomet/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/physiomet/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="55" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="55" />
+        <state relative-caret-position="255">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/physiomet/database/migrations/2018_08_04_170115_create_page_images_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>

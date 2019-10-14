@@ -1,7 +1,7 @@
 <?php
 
 //Auth::routes();
-Route::redirect('/admin', '/wesa/admin/login');
+Route::redirect('/admin', '/physiomet/admin/login');
 
 // Authentication Routes...
 Route::get('admin/login', 'Admin\Auth\LoginController@showLoginForm')->name('login');

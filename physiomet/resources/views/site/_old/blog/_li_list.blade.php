@@ -5,41 +5,29 @@ $image = $row->images->firstWhere('cover', 'y');
 if(isPost($image)){
     $cover = asset('uploads/post/'.$image->image);
 }
-$date = explode('-', $row->date);
 ?>
-<div class="list-items">
-	<a class="w-100 relative" href="{{ $route }}" title="{{ $row->name }}">
-		<div class="c-left absolute z-index-2 top-0 left-0 box-date">
-			<img width="25" src="{{ asset('assets/site/images/icons/date.png') }}" title="Data" alt="Data" />
-			<span>
-				<b>
-					{{ $date[1] }}
-				</b>
-				<i></i>
-				<b>
-					{{ $date[2] }}
-				</b>
-				<i></i>
-				<b>
-					{{ substr($date[0], 2, 2) }}
-				</b>
-			</span>
-		</div>
-		<div class="w-100 relative z-index-1">
-			@if(isPost($cover))
-			<figure class="w-100">
-				<img class="w-100" src="{{ $cover }}" title="{{ $row->name }}" alt="{{ $row->name }}" />
-			</figure>
-			@endif
-			<div class="w-100 h-100 absolute top-100 left-0 smooth">
-				<div class="w-100 h-100 display-table">
-					<div class="inline">
-						<span class="w-90 m-left-5 t-align-c">
-							{!! $row->name !!}
-						</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</a>
+<div class="item" data-scroll-reveal="enter bottom move 50px">
+    <a class="w-100" href="{{ $route }}" title="{{ $row->name }}">
+        @if(isPost($cover))
+            <figure class="w-100">
+                <img class="w-100" src="{{ $cover }}" title="{{ $row->name }}" alt="{{ $row->name }}" />
+            </figure>
+        @endif
+        <div class="w-100 d_flex direction-column">
+            <div class="w-100 c-left">
+                <img class="display-inline-block m-top-3 f-600-n" src="/wesa/assets/site/images/date.png" title="{{ $row->name }}" alt="{{ $row->name }}" />
+                <span class="display-inline-block m-left-15-px color-grey f-size-14 f-w-400 f-600-n">
+                    {{ mysql_to_data($row->date) }}
+                </span>
+            </div>
+            <span class="w-100 m-top-10">
+            {{ $row->name }}
+            </span>
+            <div class="w-100 m-top-10 text">
+                <p>
+                    {!! resume(strip_tags($row->description), 150) !!}
+                </p>
+            </div>
+        </div>
+    </a>
 </div>

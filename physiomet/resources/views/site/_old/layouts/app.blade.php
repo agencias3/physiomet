@@ -34,12 +34,13 @@ if (Route::getCurrentRoute()->uri() == 'home' || Route::getCurrentRoute()->uri()
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/site/css/css/style.css') }}" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,700,800&display=swap" rel="stylesheet">
-	
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('assets/site/css/style.css') }}" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
-<body>
+<body class="w-100 relative">
+    <div class="fixed top-0 left-0 top-fix"></div>
 {!! session()->get('configuration')[2]['description'] !!}
 @if(isset($seoPage) && isPost($seoPage['script_body']))
     {!! $seoPage['script_body'] !!}
@@ -57,6 +58,7 @@ if (Route::getCurrentRoute()->uri() == 'home' || Route::getCurrentRoute()->uri()
 <script type="text/javascript" src="{{ asset('assets/site/js/plugins/slick/slick.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/site/js/plugins/slick/scripts.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/site/js/forms.js') }}"></script>
-
+<script type="text/javascript" src="{{ asset('assets/site/js/plugins/scrollreveal/scrollReveal.min.js') }}"></script>
+<script type="text/javascript">window.scrollReveal = new scrollReveal();</script>
 </body>
 </html>
