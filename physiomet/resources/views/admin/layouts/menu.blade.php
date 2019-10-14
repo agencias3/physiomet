@@ -68,23 +68,11 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-parent @if(isset($config['activeMenu']) && $config['activeMenu'] == 'tip') nav-expanded nav-active @endif">
-                        <a>
-                            <i class="fa fa-question" aria-hidden="true"></i>
-                            <span>Você sabia?</span>
+                    <li @if(isset($config['activeMenu']) && $config['activeMenu'] == 'covenant')class="nav-expanded nav-active"@endif>
+                        <a href="{{ route('admin.covenant.index') }}">
+                            <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                            <span>Convênios</span>
                         </a>
-                        <ul class="nav nav-children">
-                            <li @if(isset($config['activeMenuN2']) && $config['activeMenuN2'] == 'tip')class="active"@endif>
-                                <a href="{{ route('admin.tip.index') }}">
-                                    Você sabia?
-                                </a>
-                            </li>
-                            <li @if(isset($config['activeMenuN2']) && $config['activeMenuN2'] == 'page-7')class="active"@endif>
-                                <a href="{{ route('admin.configuration.page.edit', 7) }}">
-                                    Descrição
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                     <li @if(isset($config['activeMenu']) && $config['activeMenu'] == 'client')class="nav-expanded nav-active"@endif>
                         <a href="{{ route('admin.client.index') }}">

@@ -52,6 +52,18 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
         });
     });
 
+    //COVENANTS
+    Route::group(['prefix' => 'covenant', 'as' => 'covenant.', 'namespace' => 'Covenant'], function () {
+        Route::get('', ['as' => 'index', 'uses' => 'CovenantController@index']);
+        Route::get('create', ['as' => 'create', 'uses' => 'CovenantController@create']);
+        Route::post('store', ['as' => 'store', 'uses' => 'CovenantController@store']);
+        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'CovenantController@edit']);
+        Route::post('update/{id}', ['as' => 'update', 'uses' => 'CovenantController@update']);
+        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'CovenantController@destroy']);
+        Route::get('active/{id}', ['as' => 'active', 'uses' => 'CovenantController@active']);
+        Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'CovenantController@destroyFile']);
+    });
+
     //TEAM
     Route::group(['prefix' => 'team', 'as' => 'team.', 'namespace' => 'Team'], function () {
         Route::get('', ['as' => 'index', 'uses' => 'TeamController@index']);

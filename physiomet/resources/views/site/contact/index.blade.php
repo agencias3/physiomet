@@ -50,7 +50,7 @@
                         </figure>
                         <div class="w-100 m-top-30 text">
                             <p>
-                                {!! nl2br(session()->get('configuration')[1]['description']) !!}
+                                {!! nl2br(session()->get('configuration')[11]['description']) !!}
                                 <br />
                                 Celular/Whatsapp
                             </p>
