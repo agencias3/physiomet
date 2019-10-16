@@ -26,27 +26,39 @@ class PageItemController extends Controller
 
     public function index($page_id)
     {
-        $config = $this->header();
+        $config = $this->header($page_id);
         $dados = $this->repository->orderBy('order', 'asc')->scopeQuery(function ($query) use ($page_id) {
             return $query->where('page_id', $page_id);
         })->paginate();
 
+        if($page_id == 1){
+            $config['activeMenu'] = "about";
+        }
+
         return view('admin.configuration.page.item.index', compact('dados', 'config', 'page_id'));
     }
 
-    public function header()
+    public function header($page_id = null)
     {
         $config['title'] = "Páginas e Textos > Ítens";
         $config['activeMenu'] = "page";
         $config['activeMenuN2'] = "page";
+
+        if($page_id){
+            $config['activeMenuN2'] = "page-".$page_id;
+        }
 
         return $config;
     }
 
     public function create($page_id)
     {
-        $config = $this->header();
+        $config = $this->header($page_id);
         $config['action'] = 'Cadastrar';
+
+        if($page_id == 1){
+            $config['activeMenu'] = "about";
+        }
 
         return view('admin.configuration.page.item.create', compact('config', 'page_id'));
     }
@@ -71,10 +83,14 @@ class PageItemController extends Controller
 
     public function edit($id)
     {
-        $config = $this->header();
-        $config['action'] = 'Editar';
         $dados = $this->repository->find($id);
         $page_id = $dados->page_id;
+
+        $config = $this->header($page_id);
+        $config['action'] = 'Editar';
+        if($page_id == 1){
+            $config['activeMenu'] = "about";
+        }
 
         return view('admin.configuration.page.item.edit', compact('dados', 'config', 'page_id'));
     }

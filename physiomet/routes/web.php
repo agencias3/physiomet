@@ -1,10 +1,5 @@
 <?php
 
-use AgenciaS3\Entities\Form;
-use AgenciaS3\Mail\Site\Contact\PartnerClientMail;
-use AgenciaS3\Mail\Site\Contact\PartnerMail;
-use Illuminate\Support\Facades\Mail;
-
 include('admin.php');
 /*
 |--------------------------------------------------------------------------
@@ -33,20 +28,10 @@ Route::group(['namespace' => 'Site'], function () {
     Route::get('/a-clinica', 'AboutController@index')->name('about');
 
     Route::get('/servicos', 'ServiceController@index')->name('service');
-    Route::get('/produtos/{seo_link}', 'ProductController@category')->name('product.category');
-    Route::get('/produtos/{category}/{seo_link}', 'ProductController@show')->name('product.show');
+    Route::get('/servicos/{seo_link}', 'ServiceController@show')->name('service.show');
 
-    Route::get('/seguimentos', 'SegmentController@index')->name('segment');
-    Route::get('/seguimentos/{seo_link}', 'SegmentController@show')->name('segment.show');
-
-    Route::get('/empreendimentos', 'EnterpriseController@index')->name('enterprise');
-    Route::get('/empreendimentos/{seo_link}', 'EnterpriseController@show')->name('enterprise.show');
-
-    Route::get('/faq', 'FaqController@index')->name('faq');
-    Route::get('/faq/like/{id}/{like}', 'FaqController@like')->name('like');
-
-    Route::get('/segmentos-de-negocios', 'BusinessSegmentsController@index')->name('business-segments');
-    Route::get('/segmentos-de-negocios/{seo_link}', 'BusinessSegmentsController@show')->name('business-segments.show');
+    Route::get('/tipos-fisio', 'TypeController@index')->name('type');
+    Route::get('/tipos-fisio/{seo_link}', 'TypeController@show')->name('type.show');
 
     Route::get('/blog', 'BlogController@index')->name('blog');
     Route::get('/blog/tag/{tag}', 'BlogController@tag')->name('blog.tag');
@@ -54,36 +39,6 @@ Route::group(['namespace' => 'Site'], function () {
 
     Route::get('/contato', 'ContactController@index')->name('contact');
     Route::post('/contato/store', 'ContactController@store')->name('contact.store');
-
-    Route::get('/trabalhe-conosco', 'WorkController@index')->name('work');
-    Route::post('/trabalhe-conosco/store', 'WorkController@store')->name('work.store');
-
-    Route::get('/parceiros', 'PartnerController@index')->name('partner');
-    Route::post('/parceiros/store', 'PartnerController@store')->name('partner.store');
-
     Route::post('/newsletter/store', 'NewsletterController@store')->name('newsletter.store');
-
-    Route::group(['namespace' => 'Ajax', 'prefix' => 'ajax', 'as' => 'ajax.'], function () {
-        Route::get('/getAddress/{zip_code}', 'AddressController@getAddress')->name('address.getAddress');
-    });
-
-    /*
-    Route::get('/test-email', function(){
-        $dados = \AgenciaS3\Entities\TechnicalAssistance::find(64);
-        $form = Form::with('emails')->find(4);
-
-        //email admin
-        if ($form->emails) {
-            $emails = [];
-            foreach ($form->emails as $row) {
-                $emails[] = $row->email;
-            }
-            Mail::to($emails)->send(new \AgenciaS3\Mail\Site\TechnicalAssistance\TechnicalAssistanceMail($dados));
-        }
-
-        //email client
-        return Mail::to($dados)->send(new \AgenciaS3\Mail\Site\TechnicalAssistance\TechnicalAssistanceClientMail($dados, $form));
-    });
-    */
 
 });

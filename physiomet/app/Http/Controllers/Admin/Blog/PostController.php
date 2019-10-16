@@ -24,22 +24,18 @@ class PostController extends Controller
 
     protected $postTagController;
 
-    protected $segmentRepository;
-
     protected $utilObjeto;
 
     public function __construct(PostRepository $repository,
                                 PostValidator $validator,
                                 PostImageController $postImageController,
                                 PostTagController $postTagController,
-                                SegmentRepository $segmentRepository,
                                 UtilObjeto $utilObjeto)
     {
         $this->repository = $repository;
         $this->validator = $validator;
         $this->postImageController = $postImageController;
         $this->postTagController = $postTagController;
-        $this->segmentRepository = $segmentRepository;
         $this->utilObjeto = $utilObjeto;
     }
 
@@ -53,7 +49,7 @@ class PostController extends Controller
 
     public function header()
     {
-        $config['title'] = "Blog";
+        $config['title'] = "Post";
         $config['activeMenu'] = "blog";
         $config['activeMenuN2'] = "post";
 
@@ -65,9 +61,7 @@ class PostController extends Controller
         $config = $this->header();
         $config['action'] = 'Cadastrar';
 
-        $segments = $this->segmentRepository->orderBy('name', 'asc')->pluck('name', 'id')->prepend('Selecione', '');
-
-        return view('admin.blog.post.create', compact('config', 'segments'));
+        return view('admin.blog.post.create', compact('config'));
     }
 
     public function store(AdminRequest $request)
@@ -100,13 +94,12 @@ class PostController extends Controller
         $dados = $this->repository->find($id);
         $dados['date'] = mysql_to_data($dados->date);
         $dados['date_publish'] = mysql_to_data($dados->date_publish, true);
-        $segments = $this->segmentRepository->orderBy('name', 'asc')->pluck('name', 'id')->prepend('Selecione', '');
 
         $warnings[] = (new KeywordCheckController)->checkDescription($dados->description, 'Descrição', 3);
         $warnings[] = (new KeywordCheckController)->checkDescription($dados->name, 'Nome', 1);
         $warnings[] = (new KeywordCheckController)->checkDescription($dados->seo_link, 'SEO Link', 1);
 
-        return view('admin.blog.post.edit', compact('dados', 'config', 'warnings', 'segments'));
+        return view('admin.blog.post.edit', compact('dados', 'config', 'warnings'));
     }
 
     public function update(AdminRequest $request, $id)

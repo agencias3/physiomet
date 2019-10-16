@@ -1,7 +1,7 @@
 @if(!$teams->isEmpty())
 <div class="w-100 m-top-80 container w-1024-100 m-top-1024-20">
     <h1 class="w-100 main-color l-height-14 f-size-30 font-3 t-align-1024-c f-size-1024-22">
-        Conheça-nossos profissionais
+        Conheça nossos profissionais
     </h1>
 </div>
 <ul class="w-100 m-top-40 slider-slick-4 list-group-5 m-top-1024-60">

@@ -5,8 +5,8 @@ namespace AgenciaS3\Http\Controllers\Site;
 use AgenciaS3\Entities\Form;
 use AgenciaS3\Http\Controllers\Controller;
 use AgenciaS3\Http\Requests\SiteRequest;
-use AgenciaS3\Mail\Site\Contact\PartnerClientMail;
-use AgenciaS3\Mail\Site\Contact\PartnerMail;
+use AgenciaS3\Mail\Site\Contact\ContactClientMail;
+use AgenciaS3\Mail\Site\Contact\ContactMail;
 use AgenciaS3\Repositories\ContactRepository;
 use AgenciaS3\Services\SEOService;
 use AgenciaS3\Validators\ContactValidator;
@@ -69,7 +69,7 @@ class ContactController extends Controller
 
     public function sendMail($dados)
     {
-        $form = Form::with('emails')->find(1);
+        $form = Form::with('emails')->find(2);
 
         //email admin
         if ($form->emails) {
@@ -77,11 +77,11 @@ class ContactController extends Controller
             foreach ($form->emails as $row) {
                 $emails[] = $row->email;
             }
-            Mail::to($emails)->send(new PartnerMail($dados));
+            Mail::to($emails)->send(new ContactMail($dados));
         }
 
         //email client
-        return Mail::to($dados)->send(new PartnerClientMail($dados, $form));
+        return Mail::to($dados)->send(new ContactClientMail($dados, $form));
     }
 
 }

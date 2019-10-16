@@ -24,14 +24,21 @@ class Contact extends Model implements Transformable
      * @var array
      */
     protected $fillable = [
+        'service_id',
         'name',
         'email',
         'phone',
+        'cell_phone',
         'subject',
         'message',
         'view',
         'session_id',
         'ip'
     ];
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class, 'service_id');
+    }
 
 }

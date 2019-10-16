@@ -19,8 +19,8 @@
 $style = [
     /* Layout ------------------------------ */
 
-    'body' => 'margin: 0; padding: 0; width: 100%; background-color: #0d3880;',
-    'email-wrapper' => 'width: 100%; margin: 0; padding: 0; background-color: #0d3880;',
+    'body' => 'margin: 0; padding: 0; width: 100%; background-color: #0f2b4b;',
+    'email-wrapper' => 'width: 100%; margin: 0; padding: 0; background-color: #0f2b4b;',
 
     /* Masthead ----------------------- */
 
@@ -84,8 +84,11 @@ $style = [
                                     <!-- Intro -->
                                     <p style="{{ $style['paragraph'] }}">
                                         Nome: {{ $data->name }}<br />
-                                        Telefone: {{ $data->phone }}<br />
                                         E-mail: {{ $data->email }}<br />
+                                        Telefone: {{ $data->phone }}<br />
+                                        Serviço: @if(isset($data->service->name)){{ $data->service->name }}@endif<br />
+                                        Celular: {{ $data->cell_phone }}<br />
+                                        Assunto: {{ $data->subject }}<br />
                                         Mensagem: {{ $data->message }}<br /><br />
                                         Data recebido {{ date('d/m/Y h:i', strtotime($data->created_at)) }}
                                     </p>

@@ -31,7 +31,7 @@
                             <th class="text-center">Data</th>
                             <th class="text-center">Data Publicação</th>
                             <th class="col-md-1 text-center">Ativo</th>
-                            <th class="col-md-4 text-center">Ação</th>
+                            <th class="col-md-3 text-center">Ação</th>
                         </tr>
                     </thead>
                     <tbody>

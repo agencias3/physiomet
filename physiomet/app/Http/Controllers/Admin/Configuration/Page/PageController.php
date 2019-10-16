@@ -91,32 +91,18 @@ class PageController extends Controller
         }
 
         if ($id == 2) {
-            $config['activeMenu'] = "segment";
-        }
-        if ($id == 6) {
-            $config['activeMenu'] = "form";
-        }
-        if ($id == 7) {
-            $config['activeMenu'] = "tip";
+            $config['activeMenu'] = "blog";
         }
 
         $imageSize = 'xx X xx';
         if ($id == 1) {
-            $imageSize = '470px X 370px';
-        }
-        if ($id == 2) {
-            $imageSize = '500px X 537px';
-        }
-
-        $bannerSize = '1920px X 500px';
-        if ($id == 1 || $id == 6 || $id == 7) {
-            $bannerSize = '1920px X 500px';
+            $imageSize = '650px X 490px';
         }
 
         $config['activeMenuN2'] = "page-" . $id;
         $dados = $this->repository->find($id);
 
-        return view('admin.configuration.page.edit', compact('dados', 'config', 'imageSize', 'bannerSize'));
+        return view('admin.configuration.page.edit', compact('dados', 'config', 'imageSize'));
     }
 
     public function update(AdminRequest $request, $id)

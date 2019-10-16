@@ -18,6 +18,13 @@
                 ?>
 
                 @include('admin.configuration.page.inc.menu')
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-info">
+                            Tamanho Imagem (1200px X 630px)
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row cadImage" style="margin: 20px 0;">
                     <div class="col-sm-12 center">

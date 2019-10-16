@@ -1465,13 +1465,13 @@ a.t-under:hover {
   -o-transition: 300ms ease-in 70ms;
   transition: 300ms ease-in 70ms; }
 
-.d_flex, .slick-track {
+.d_flex, .slick-track, .pagination {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
-  .d_flex .flex-1, .slick-track .flex-1 {
+  .d_flex .flex-1, .slick-track .flex-1, .pagination .flex-1 {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     width: 100%;
@@ -2172,11 +2172,11 @@ footer footer {
   width: 13px;
   height: 13px;
   margin: 0 7px;
-  background: #09468a;
+  border: 1px solid #ffffff;
   color: transparent !important;
   cursor: pointer; }
   .pager-banner span.cycle-pager-active {
-    background: #bfd356; }
+    background: #ffffff; }
 
 /* SLIDER */
 .slick-slider {
@@ -2406,6 +2406,44 @@ footer footer {
   background-position: center center;
   margin: -65px 13px 0 0; }
 
+.pagination {
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  text-align: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: center;
+  justify-content: center; }
+  .pagination li {
+    border: 1px solid #09468a;
+    border-top: 2px solid #09468a;
+    border-bottom: 2px solid #09468a;
+    margin: 10px 0 0 0;
+    width: 35px;
+    height: 35px; }
+    .pagination li:first-of-type {
+      border-left: 2px solid #09468a; }
+      .pagination li:first-of-type span, .pagination li:first-of-type a {
+        line-height: 32px; }
+    .pagination li:last-of-type {
+      border-right: 2px solid #09468a; }
+      .pagination li:last-of-type span, .pagination li:last-of-type a {
+        line-height: 32px; }
+    .pagination li span, .pagination li a {
+      float: left;
+      width: 35px;
+      height: 33px;
+      line-height: 33px;
+      background: transparent;
+      text-align: center;
+      font-weight: 300;
+      color: #09468a;
+      font-size: 1.6em; }
+    .pagination li.active a, .pagination li.active span,.pagination li a:hover {
+      background: #09468a;
+      color: #ffffff; }
 @media (max-width: 1500px) {
   .w-1500-100 {
     width: 100% !important;

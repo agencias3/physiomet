@@ -9,6 +9,40 @@
         <li>
             >
         </li>
+        @if($ativo == 'servicos' || $ativo == 'servicos/{seo_link}')
+            <li>
+                <a @if($ativo == 'servicos') class="active" @endif href="{{ route('service') }}" title="Serviços">
+                    Serviços
+                </a>
+            </li>
+            @if($ativo == 'servicos/{seo_link}')
+                <li>
+                    >
+                </li>
+                <li>
+                    <a class="active" href="{{ route('service.show', $service->seo_link) }}" title="{{ $service->name }}">
+                        {{ $service->name }}
+                    </a>
+                </li>
+            @endif
+        @endif
+        @if($ativo == 'tipos-fisio' || $ativo == 'tipos-fisio/{seo_link}')
+            <li>
+                <a @if($ativo == 'tipos-fisio') class="active" @endif href="{{ route('type') }}" title="Tipos de Fisioterapia">
+                    Tipos de Fisioterapia
+                </a>
+            </li>
+            @if($ativo == 'tipos-fisio/{seo_link}')
+                <li>
+                    >
+                </li>
+                <li>
+                    <a class="active" href="{{ route('type.show', $type->seo_link) }}" title="{{ $type->name }}">
+                        {{ $type->name }}
+                    </a>
+                </li>
+            @endif
+        @endif
         @if($ativo == 'blog' || $ativo == 'blog/tag/{tag}' || $ativo == 'blog/{seo_link}')
         <li>
             <a @if($ativo == 'blog' ) class="active" @endif href="{{ route('blog') }}" title="Blog">

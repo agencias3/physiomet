@@ -19,8 +19,8 @@
 $style = [
     /* Layout ------------------------------ */
 
-    'body' => 'margin: 0; padding: 0; width: 100%; background-color: #0d3880;',
-    'email-wrapper' => 'width: 100%; margin: 0; padding: 0; background-color: #0d3880;',
+    'body' => 'margin: 0; padding: 0; width: 100%; background-color: #0f2b4b;',
+    'email-wrapper' => 'width: 100%; margin: 0; padding: 0; background-color: #0f2b4b;',
 
     /* Masthead ----------------------- */
 

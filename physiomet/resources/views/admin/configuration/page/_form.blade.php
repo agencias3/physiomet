@@ -3,7 +3,7 @@
     @if($dados->id == 10)
         @include('admin.layouts.forms._video')
     @endif
-    @if($dados->id == 1 || $dados->id == 2)
+    @if($dados->id == 1)
         @include('admin.layouts.forms._image',[
             'label' => 'Imagem',
             'size' => $imageSize,
@@ -19,8 +19,5 @@
             'route_destroy_2' => route('admin.configuration.page.destroyFile', ['id' => $dados->id, 'name' => 'video_ogg'])
         ])
     @endif
-    @if($dados->id != 9 && $dados->id != 10 &&
-    $dados->id != 12 && $dados->id != 17)
-        @include('admin.layouts.forms._description')
-    @endif
+    @include('admin.layouts.forms._description')
 @endif

@@ -6,7 +6,7 @@ if(isPost($image)){
     $cover = asset('uploads/post/'.$image->image);
 }
 ?>
-<div class="item w-600-100">
+<div class="item d_flex justify-end direction-column w-600-100">
     @if(isPost($cover))
     <figure class="w-100 b-radius-15 overflow-h">
         <a class="w-100" href="{{ $route }}" title="{{ $row->name }}">
@@ -14,7 +14,7 @@ if(isPost($image)){
         </a>
     </figure>
     @endif
-    <div class="w-100 d_flex direction-column">
+    <div class="w-100 d_flex justify-end direction-column">
         <span class="m-top-20 color-grey f-size-16">
             {{ mysql_to_data($row->date) }}
         </span>

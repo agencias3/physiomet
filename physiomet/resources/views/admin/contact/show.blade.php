@@ -35,6 +35,18 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label class="control-label text-bold">Serviço: </label>
+                            <span class="help-block">{{ isset($dados->service->name) ? $dados->service->name : '' }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label text-bold">Celular: </label>
+                            <span class="help-block">{{ $dados->cell_phone }}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
                             <label class="control-label text-bold">Assunto: </label>
                             <span class="help-block">{{ $dados->subject }}</span>
                         </div>

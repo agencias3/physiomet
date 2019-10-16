@@ -32,68 +32,7 @@
                     @endforeach
                 @endif
             </ul>
-            <ul class="w-100 m-top-50 slider-slick-4 list-group-1 m-top-1024-30">
-                <li class="f-left">
-                    <a class="d_flex w-100 h-100 direction-column justify-center bg-white b-radius-20" href="" title="">
-                        <figure class="self-center">
-                            <img class="f-left" src="/physiomet/uploads/page/service-1.png" title="" alt="" />
-                        </figure>
-                        <span class="m-top-25 main-color f-size-22">
-                            Fisioterapia
-                        </span>
-                    </a>
-                </li>
-                <li class="f-left">
-                    <a class="d_flex w-100 h-100 direction-column justify-center bg-white b-radius-20" href="" title="">
-                        <figure class="self-center">
-                            <img class="f-left" src="/physiomet/uploads/page/service-2.png" title="" alt="" />
-                        </figure>
-                        <span class="m-top-25 main-color f-size-22">
-                            Fisioterapia
-                        </span>
-                    </a>
-                </li>
-                <li class="f-left">
-                    <a class="d_flex w-100 h-100 direction-column justify-center bg-white b-radius-20" href="" title="">
-                        <figure class="self-center">
-                            <img class="f-left" src="/physiomet/uploads/page/service-1.png" title="" alt="" />
-                        </figure>
-                        <span class="m-top-25 main-color f-size-22">
-                            Fisioterapia
-                        </span>
-                    </a>
-                </li>
-                <li class="f-left">
-                    <a class="d_flex w-100 h-100 direction-column justify-center bg-white b-radius-20" href="" title="">
-                        <figure class="self-center">
-                            <img class="f-left" src="/physiomet/uploads/page/service-3.png" title="" alt="" />
-                        </figure>
-                        <span class="m-top-25 main-color f-size-22">
-                            Fisioterapia
-                        </span>
-                    </a>
-                </li>
-                <li class="f-left">
-                    <a class="d_flex w-100 h-100 direction-column justify-center bg-white b-radius-20" href="" title="">
-                        <figure class="self-center">
-                            <img class="f-left" src="/physiomet/uploads/page/service-4.png" title="" alt="" />
-                        </figure>
-                        <span class="m-top-25 main-color f-size-22">
-                            Fisioterapia
-                        </span>
-                    </a>
-                </li>
-                <li class="f-left">
-                    <a class="d_flex w-100 h-100 direction-column justify-center bg-white b-radius-20" href="" title="">
-                        <figure class="self-center">
-                            <img class="f-left" src="/physiomet/uploads/page/service-3.png" title="" alt="" />
-                        </figure>
-                        <span class="m-top-25 main-color f-size-22">
-                            Fisioterapia
-                        </span>
-                    </a>
-                </li>
-            </ul>
+            @include('site.home.type')
             @include('site.about.team')
         </div>
     </section>

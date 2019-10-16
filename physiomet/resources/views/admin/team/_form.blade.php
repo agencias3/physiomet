@@ -13,7 +13,7 @@
 ])
 @include('admin.layouts.forms._image',[
     'label' => 'Imagem',
-    'size' => '1920px X 1080px, conteúdo principal centralizado',
+    'size' => '320px X 280px, conteúdo principal centralizado',
     'name' => 'image',
     'path' => 'team',
     'route_destroy' => route('admin.team.destroyFile', ['id' => isset($dados->id) ? $dados->id : null, 'name' => 'image'])

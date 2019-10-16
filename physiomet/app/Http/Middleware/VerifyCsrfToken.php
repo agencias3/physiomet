@@ -15,6 +15,7 @@ class VerifyCsrfToken extends Middleware
         'admin/blog/post/gallery/*',
         'admin/configuration/page/gallery/*',
         'admin/product/gallery/*',
-        'admin/segment/gallery/*',
+        'admin/service/gallery/*',
+        'admin/type/gallery/*',
     ];
 }

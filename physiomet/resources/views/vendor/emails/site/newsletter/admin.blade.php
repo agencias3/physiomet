@@ -19,12 +19,12 @@
 $style = [
     /* Layout ------------------------------ */
 
-    'body' => 'margin: 0; padding: 0; width: 100%; background-color: #f7941d;',
-    'email-wrapper' => 'width: 100%; margin: 0; padding: 0; background-color: #f7941d;',
+    'body' => 'margin: 0; padding: 0; width: 100%; background-color: #0f2b4b;',
+    'email-wrapper' => 'width: 100%; margin: 0; padding: 0; background-color: #0f2b4b;',
 
     /* Masthead ----------------------- */
 
-    'email-masthead' => 'padding: 25px 0; text-align: center; background: #404041;',
+    'email-masthead' => 'padding: 25px 0; text-align: center; background: #ffffff;',
     'email-masthead_name' => 'font-size: 16px; font-weight: bold; color: #2F3133; text-decoration: none; text-shadow: 0 1px 0 white;',
 
     'email-body' => 'width: 100%; margin: 0; padding: 0; border-top: 1px solid #EDEFF2; border-bottom: 1px solid #EDEFF2; background-color: #FFF;',
@@ -42,16 +42,18 @@ $style = [
     /* Type ------------------------------ */
 
     'anchor' => 'color: #ffffff;',
+    'anchor_2' => 'color: #74787e;',
     'header-1' => 'margin-top: 0; color: #2F3133; font-size: 19px; font-weight: bold; text-align: left;',
     'paragraph' => 'margin-top: 0; color: #74787E; font-size: 16px; line-height: 1.5em;',
     'paragraph-sub' => 'margin-top: 0; color: #ffffff; font-size: 12px; line-height: 1.5em;',
+    'paragraph-sub_2' => 'margin-top: 0; color: #74787e; font-size: 12px; line-height: 1.5em;',
     'paragraph-center' => 'text-align: center;',
 
     /* Buttons ------------------------------ */
 
     'button' => 'display: block; display: inline-block; width: 200px; min-height: 20px; padding: 10px;
-background-color: #3869D4; border-radius: 3px; color: #ffffff; font-size: 15px; line-height: 25px;
-text-align: center; text-decoration: none; -webkit-text-size-adjust: none;',
+    background-color: #3869D4; border-radius: 3px; color: #ffffff; font-size: 15px; line-height: 25px;
+    text-align: center; text-decoration: none; -webkit-text-size-adjust: none;',
 
     'button--green' => 'background-color: #22BC66;',
     'button--red' => 'background-color: #dc4d2f;',

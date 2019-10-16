@@ -128,6 +128,8 @@ class ContactController extends Controller
         $campos = "Nome;";
         $campos .= "E-mail;";
         $campos .= "Telefone;";
+        $campos .= "Serviço;";
+        $campos .= "Celular;";
         $campos .= "Assunto;";
         $campos .= "Visualizado;";
         $campos .= "Mensagem;";
@@ -142,10 +144,14 @@ class ContactController extends Controller
                 $view = 'Sim';
             }
 
+            $service = isset($dados->service->name) ? $dados->service->name : '';
+
             $item = '"';
             $item .= utf8_decode($dados->name) . '";"';
             $item .= utf8_decode($dados->email) . '";"';
             $item .= utf8_decode($dados->phone) . '";"';
+            $item .= utf8_decode($service) . '";"';
+            $item .= utf8_decode($dados->cell_phone) . '";"';
             $item .= utf8_decode($dados->subject) . '";"';
             $item .= utf8_decode($view) . '";"';
             $item .= utf8_decode($dados->message) . '";"';

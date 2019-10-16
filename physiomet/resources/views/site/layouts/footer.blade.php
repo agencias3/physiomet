@@ -5,63 +5,7 @@
                 <h4 class="w-100 color-white title">
                     FALE CONOSCO
                 </h4>
-                <form class="w-100 m-top-40 d_flex wrap justify-space form m-top-1024-10 direction-800-column" id="fContact" method="post" action="">
-                    <fieldset class="flex-1 d_flex">
-                        <label class="d_flex justify-center self-center" for="contact-name">
-                            <img src="{{ asset('assets/site/images/label-1.png') }}" title="" alt="" />
-                        </label>
-                        <input class="flex-1" type="text" id="contact-name" value="" placeholder="Ana Cláudia Soares" />
-                    </fieldset>
-                    <fieldset class="flex-1 d_flex">
-                        <label class="d_flex justify-center self-center" for="contact-email">
-                            <img src="{{ asset('assets/site/images/label-2.png') }}" title="" alt="" />
-                        </label>
-                        <input class="flex-1" type="email" id="contact-email" value="" placeholder="E-mail" />
-                    </fieldset>
-                    <fieldset class="flex-1 d_flex">
-                        <label class="d_flex justify-center self-center" for="contact-phone">
-                            <img src="{{ asset('assets/site/images/label-3.png') }}" title="" alt="" />
-                        </label>
-                        <input class="flex-1 masked-phone" type="text" id="contact-phone" value="" placeholder="Telefone" />
-                    </fieldset>
-                    <fieldset class="flex-1 d_flex">
-                        <label class="d_flex justify-center self-center" for="contact-service">
-                            <img src="{{ asset('assets/site/images/label-4.png') }}" title="" alt="" />
-                        </label>
-                        <select class="flex-1">
-                            <option>
-                                Selecione um Serviço
-                            </option>
-                            <option>
-                                Serviço 01
-                            </option>
-                            <option>
-                                Serviço 02
-                            </option>
-                            <option>
-                                Serviço 03
-                            </option>
-                        </select>
-                    </fieldset>
-                    <fieldset class="flex-1 d_flex">
-                        <label class="d_flex justify-center self-center" for="contact-cellphone">
-                            <img src="{{ asset('assets/site/images/label-5.png') }}" title="" alt="" />
-                        </label>
-                        <input class="flex-1 masked-phone" type="text" id="contact-cellphone" value="" placeholder="Celular" />
-                    </fieldset>
-                    <fieldset class="flex-1 d_flex">
-                        <label class="d_flex justify-center self-center" for="contact-subject">
-                            <img src="{{ asset('assets/site/images/label-6.png') }}" title="" alt="" />
-                        </label>
-                        <input type="text" id="contact-subject" value="" placeholder="Assunto" />
-                    </fieldset>
-                    <fieldset class="flex-1 p-top-10 p-bottom-10 w-100 d_flex">
-                        <textarea class="flex-1" type="text" id="contact-message" placeholder="Mensagem..."></textarea>
-                    </fieldset>
-                    <fieldset class="flex-1 w-100 d_flex justify-end box-submit justify-1024-center">
-                        <input class="pointer smooth" type="submit" id="send-contact" value="Enviar" />
-                    </fieldset>
-                </form>
+                @include('site.contact._form')
                 @if(isPost(session()->get('configuration')[9]['description']) || isPost(session()->get('configuration')[6]['description']) || isPost(session()->get('configuration')[7]['description']))
                 <div class="w-100 m-top-50 d_flex wrap justify-center box-social m-top-1024-30 direction-600-column">
                     <p class="d_flex justify-end w-600-100 justify-600-center t-align-600-c">
@@ -173,7 +117,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" title="Tipos de Fisio">
+                                <a href="{{ route('type') }}" title="Tipos de Fisio">
                                     Tipos de Fisio
                                 </a>
                             </li>
@@ -221,18 +165,7 @@
                     @endif
                 </article>
                 <aside class="d_flex direction-column w-1024-100 m-top-1024-30 t-align-1024-c">
-                    <span class="w-100 color-white f-size-16 font-2">
-                        NEWSLETTER
-                    </span>
-                    <form class="w-100 m-top-25 form-newsletter" id="fNewsletter" method="post" action="">
-                        <label class="w-100" for="newsletter-email">
-                            Assine para receber novidades por e-mail!
-                        </label>
-                        <fieldset class="w-100 m-top-15 d_flex b-radius-50 overflow-h">
-                            <input class="flex-1" type="email" id="newsletter-email" value="" placeholder="physiomet@physiomet.com.br" />
-                            <input type="submit" id="send-newsletter" value="" />
-                        </fieldset>
-                    </form>
+                    @include('site.newsletter._form')
                     <div class="w-100 m-top-20 text text-3">
                         <p>
                             @if(isPost(session()->get('configuration')[5]['description']))

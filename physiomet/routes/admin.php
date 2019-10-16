@@ -14,16 +14,10 @@ Route::post('admin/password/email', 'Admin\Auth\ForgotPasswordController@sendRes
 Route::get('admin/password/reset/{token}', 'Admin\Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('admin/password/reset', 'Admin\Auth\ResetPasswordController@reset');
 
-
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {
 
     // HOME
     Route::get('/home', ['as' => 'home.index', 'uses' => 'HomeController@index']);
-
-    // AJAX
-    Route::group(['prefix' => 'ajax', 'as' => 'ajax.', 'namespace' => 'Ajax'], function () {
-        Route::get('getAddress/{zip_code}', ['as' => 'getAddress', 'uses' => 'AddressController@getAddress']);
-    });
 
     //BANNERS
     Route::group(['prefix' => 'banner', 'as' => 'banner.', 'namespace' => 'Banner'], function () {
@@ -76,76 +70,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
         Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'TeamController@destroyFile']);
     });
 
-    //CATEGORY
-    Route::group(['prefix' => 'category', 'as' => 'category.', 'namespace' => 'Category'], function () {
-        Route::get('', ['as' => 'index', 'uses' => 'CategoryController@index']);
-        Route::get('create', ['as' => 'create', 'uses' => 'CategoryController@create']);
-        Route::post('store', ['as' => 'store', 'uses' => 'CategoryController@store']);
-        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'CategoryController@edit']);
-        Route::post('update/{id}', ['as' => 'update', 'uses' => 'CategoryController@update']);
-        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'CategoryController@destroy']);
-        Route::get('active/{id}', ['as' => 'active', 'uses' => 'CategoryController@active']);
-        Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'CategoryController@destroyFile']);
-    });
-
-    //PRODUCTS
-    Route::group(['prefix' => 'product', 'as' => 'product.', 'namespace' => 'Product'], function () {
-        Route::get('', ['as' => 'index', 'uses' => 'ProductController@index']);
-        Route::get('create', ['as' => 'create', 'uses' => 'ProductController@create']);
-        Route::post('store', ['as' => 'store', 'uses' => 'ProductController@store']);
-        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'ProductController@edit']);
-        Route::post('update/{id}', ['as' => 'update', 'uses' => 'ProductController@update']);
-        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'ProductController@destroy']);
-        Route::get('active/{id}', ['as' => 'active', 'uses' => 'ProductController@active']);
-        Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'ProductController@destroyFile']);
-
-        //GALERY
-        Route::group(['prefix' => 'gallery', 'as' => 'gallery.'], function () {
-            Route::get('{id}', ['as' => 'index', 'uses' => 'ProductImageController@index']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'ProductImageController@destroy']);
-            Route::post('upload/{id}', ['as' => 'upload', 'uses' => 'ProductImageController@upload']);
-            Route::post('updateLabel/{id}', ['as' => 'updateLabel', 'uses' => 'ProductImageController@updateLabel']);
-            Route::post('cover/{id}', ['as' => 'cover', 'uses' => 'ProductImageController@cover']);
-            Route::post('order/{id}', ['as' => 'order', 'uses' => 'ProductImageController@order']);
-            Route::post('store', ['as' => 'store', 'uses' => 'ProductImageController@store']);
-            Route::get('destroyGallery/{id}', ['as' => 'destroyGallery', 'uses' => 'ProductImageController@destroyAll']);
-        });
-
-        //FILES
-        Route::group(['prefix' => 'file', 'as' => 'file.'], function () {
-            Route::get('{id}', ['as' => 'index', 'uses' => 'ProductFileController@index']);
-            Route::get('create/{id}', ['as' => 'create', 'uses' => 'ProductFileController@create']);
-            Route::post('store', ['as' => 'store', 'uses' => 'ProductFileController@store']);
-            Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'ProductFileController@edit']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'ProductFileController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'ProductFileController@destroy']);
-            Route::get('active/{id}', ['as' => 'active', 'uses' => 'ProductFileController@active']);
-            Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'ProductFileController@destroyFile']);
-        });
-
-        //TEXTS
-        Route::group(['prefix' => 'text', 'as' => 'text.'], function () {
-            Route::get('{id}', ['as' => 'index', 'uses' => 'ProductTextController@index']);
-            Route::get('create/{id}', ['as' => 'create', 'uses' => 'ProductTextController@create']);
-            Route::post('store', ['as' => 'store', 'uses' => 'ProductTextController@store']);
-            Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'ProductTextController@edit']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'ProductTextController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'ProductTextController@destroy']);
-            Route::get('active/{id}', ['as' => 'active', 'uses' => 'ProductTextController@active']);
-            Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'ProductTextController@destroyFile']);
-            Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'ProductTextController@destroyFile']);
-        });
-
-        //CLIENTS
-        Route::group(['prefix' => 'client', 'as' => 'client.'], function () {
-            Route::get('{id}', ['as' => 'index', 'uses' => 'ProductClientController@index']);
-            Route::post('store', ['as' => 'store', 'uses' => 'ProductClientController@store']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'ProductClientController@destroy']);
-        });
-
-
-    });
-
     //TIPS
     Route::group(['prefix' => 'tip', 'as' => 'tip.', 'namespace' => 'Tip'], function () {
         Route::get('', ['as' => 'index', 'uses' => 'TipController@index']);
@@ -168,285 +92,51 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
         });
     });
 
-    //FAQ
-    Route::group(['prefix' => 'faq', 'as' => 'faq.', 'namespace' => 'Faq'], function () {
-        Route::get('', ['as' => 'index', 'uses' => 'FaqController@index']);
-        Route::get('create', ['as' => 'create', 'uses' => 'FaqController@create']);
-        Route::post('store', ['as' => 'store', 'uses' => 'FaqController@store']);
-        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'FaqController@edit']);
-        Route::post('update/{id}', ['as' => 'update', 'uses' => 'FaqController@update']);
-        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'FaqController@destroy']);
-        Route::get('active/{id}', ['as' => 'active', 'uses' => 'FaqController@active']);
-    });
-
-    //SEGMENTS
-    Route::group(['prefix' => 'segment', 'as' => 'segment.', 'namespace' => 'Segment'], function () {
-        Route::get('', ['as' => 'index', 'uses' => 'SegmentController@index']);
-        Route::get('create', ['as' => 'create', 'uses' => 'SegmentController@create']);
-        Route::post('store', ['as' => 'store', 'uses' => 'SegmentController@store']);
-        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'SegmentController@edit']);
-        Route::post('update/{id}', ['as' => 'update', 'uses' => 'SegmentController@update']);
-        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'SegmentController@destroy']);
-        Route::get('active/{id}', ['as' => 'active', 'uses' => 'SegmentController@active']);
-        Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'SegmentController@destroyFile']);
+    //SERVICES
+    Route::group(['prefix' => 'service', 'as' => 'service.', 'namespace' => 'Service'], function () {
+        Route::get('', ['as' => 'index', 'uses' => 'ServiceController@index']);
+        Route::get('create', ['as' => 'create', 'uses' => 'ServiceController@create']);
+        Route::post('store', ['as' => 'store', 'uses' => 'ServiceController@store']);
+        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'ServiceController@edit']);
+        Route::post('update/{id}', ['as' => 'update', 'uses' => 'ServiceController@update']);
+        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'ServiceController@destroy']);
+        Route::get('active/{id}', ['as' => 'active', 'uses' => 'ServiceController@active']);
 
         //GALERY
         Route::group(['prefix' => 'gallery', 'as' => 'gallery.'], function () {
-            Route::get('{id}', ['as' => 'index', 'uses' => 'SegmentImageController@index']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'SegmentImageController@destroy']);
-            Route::post('upload/{id}', ['as' => 'upload', 'uses' => 'SegmentImageController@upload']);
-            Route::post('updateLabel/{id}', ['as' => 'updateLabel', 'uses' => 'SegmentImageController@updateLabel']);
-            Route::post('cover/{id}', ['as' => 'cover', 'uses' => 'SegmentImageController@cover']);
-            Route::post('order/{id}', ['as' => 'order', 'uses' => 'SegmentImageController@order']);
-            Route::post('store', ['as' => 'store', 'uses' => 'SegmentImageController@store']);
-            Route::get('destroyGallery/{id}', ['as' => 'destroyGallery', 'uses' => 'SegmentImageController@destroyAll']);
+            Route::get('{id}', ['as' => 'index', 'uses' => 'ServiceImageController@index']);
+            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'ServiceImageController@destroy']);
+            Route::post('upload/{id}', ['as' => 'upload', 'uses' => 'ServiceImageController@upload']);
+            Route::post('updateLabel/{id}', ['as' => 'updateLabel', 'uses' => 'ServiceImageController@updateLabel']);
+            Route::post('cover/{id}', ['as' => 'cover', 'uses' => 'ServiceImageController@cover']);
+            Route::post('order/{id}', ['as' => 'order', 'uses' => 'ServiceImageController@order']);
+            Route::post('store', ['as' => 'store', 'uses' => 'ServiceImageController@store']);
+            Route::get('destroyGallery/{id}', ['as' => 'destroyGallery', 'uses' => 'ServiceImageController@destroyAll']);
         });
-
-        //CLIENTS
-        Route::group(['prefix' => 'client', 'as' => 'client.'], function () {
-            Route::get('{id}', ['as' => 'index', 'uses' => 'SegmentClientController@index']);
-            Route::post('store', ['as' => 'store', 'uses' => 'SegmentClientController@store']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'SegmentClientController@destroy']);
-        });
-
-        //PRODUCTS
-        Route::group(['prefix' => 'product', 'as' => 'product.'], function () {
-            Route::get('{id}', ['as' => 'index', 'uses' => 'SegmentProductController@index']);
-            Route::post('store', ['as' => 'store', 'uses' => 'SegmentProductController@store']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'SegmentProductController@destroy']);
-        });
-
     });
 
-    //STORES
-    Route::group(['prefix' => 'store', 'as' => 'store.', 'namespace' => 'Store'], function () {
-
-        Route::get('', ['as' => 'index', 'uses' => 'StoreController@index']);
-        Route::get('create', ['as' => 'create', 'uses' => 'StoreController@create']);
-        Route::post('store', ['as' => 'store', 'uses' => 'StoreController@store']);
-        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'StoreController@edit']);
-        Route::post('update/{id}', ['as' => 'update', 'uses' => 'StoreController@update']);
-        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'StoreController@destroy']);
-        Route::get('active/{id}', ['as' => 'active', 'uses' => 'StoreController@active']);
-        Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'StoreController@destroyFile']);
-        Route::get('updateDimension', ['as' => 'updateDimension', 'uses' => 'StoreController@updateDimension']);
+    //TYPES
+    Route::group(['prefix' => 'type', 'as' => 'type.', 'namespace' => 'Type'], function () {
+        Route::get('', ['as' => 'index', 'uses' => 'TypeController@index']);
+        Route::get('create', ['as' => 'create', 'uses' => 'TypeController@create']);
+        Route::post('store', ['as' => 'store', 'uses' => 'TypeController@store']);
+        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'TypeController@edit']);
+        Route::post('update/{id}', ['as' => 'update', 'uses' => 'TypeController@update']);
+        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'TypeController@destroy']);
+        Route::get('active/{id}', ['as' => 'active', 'uses' => 'TypeController@active']);
+        Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'TypeController@destroyFile']);
 
         //GALERY
         Route::group(['prefix' => 'gallery', 'as' => 'gallery.'], function () {
-            Route::get('{id}', ['as' => 'index', 'uses' => 'StoreImageController@index']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'StoreImageController@destroy']);
-            Route::post('upload/{id}', ['as' => 'upload', 'uses' => 'StoreImageController@upload']);
-            Route::post('updateLabel/{id}', ['as' => 'updateLabel', 'uses' => 'StoreImageController@updateLabel']);
-            Route::post('cover/{id}', ['as' => 'cover', 'uses' => 'StoreImageController@cover']);
-            Route::post('order/{id}', ['as' => 'order', 'uses' => 'StoreImageController@order']);
-            Route::post('store', ['as' => 'store', 'uses' => 'StoreImageController@store']);
-            Route::get('destroyGallery/{id}', ['as' => 'destroyGallery', 'uses' => 'StoreImageController@destroyAll']);
+            Route::get('{id}', ['as' => 'index', 'uses' => 'TypeImageController@index']);
+            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'TypeImageController@destroy']);
+            Route::post('upload/{id}', ['as' => 'upload', 'uses' => 'TypeImageController@upload']);
+            Route::post('updateLabel/{id}', ['as' => 'updateLabel', 'uses' => 'TypeImageController@updateLabel']);
+            Route::post('cover/{id}', ['as' => 'cover', 'uses' => 'TypeImageController@cover']);
+            Route::post('order/{id}', ['as' => 'order', 'uses' => 'TypeImageController@order']);
+            Route::post('store', ['as' => 'store', 'uses' => 'TypeImageController@store']);
+            Route::get('destroyGallery/{id}', ['as' => 'destroyGallery', 'uses' => 'TypeImageController@destroyAll']);
         });
-
-        //RELATED
-        Route::group(['prefix' => 'related', 'as' => 'related.'], function () {
-            Route::get('{id}', ['as' => 'index', 'uses' => 'StoreRelatedController@index']);
-            Route::post('store', ['as' => 'store', 'uses' => 'StoreRelatedController@store']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'StoreRelatedController@destroy']);
-        });
-
-        //SEGMENTS
-        Route::group(['prefix' => 'segment', 'as' => 'segment.'], function () {
-            Route::get('{id}', ['as' => 'index', 'uses' => 'StoreSegmentController@index']);
-            Route::post('store', ['as' => 'store', 'uses' => 'StoreSegmentController@store']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'StoreSegmentController@destroy']);
-        });
-
-    });
-
-    //MACHINES
-    Route::group(['prefix' => 'machine', 'as' => 'machine.', 'namespace' => 'Machine'], function () {
-
-        //MACHINES
-        Route::group(['prefix' => 'machine', 'as' => 'machine.'], function () {
-            Route::get('', ['as' => 'index', 'uses' => 'MachineController@index']);
-            Route::get('create', ['as' => 'create', 'uses' => 'MachineController@create']);
-            Route::post('store', ['as' => 'store', 'uses' => 'MachineController@store']);
-            Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'MachineController@edit']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'MachineController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'MachineController@destroy']);
-            Route::get('active/{id}', ['as' => 'active', 'uses' => 'MachineController@active']);
-
-            //GALERY
-            Route::group(['prefix' => 'gallery', 'as' => 'gallery.'], function () {
-                Route::get('{id}', ['as' => 'index', 'uses' => 'MachineImageController@index']);
-                Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'MachineImageController@destroy']);
-                Route::post('upload/{id}', ['as' => 'upload', 'uses' => 'MachineImageController@upload']);
-                Route::post('updateLabel/{id}', ['as' => 'updateLabel', 'uses' => 'MachineImageController@updateLabel']);
-                Route::post('cover/{id}', ['as' => 'cover', 'uses' => 'MachineImageController@cover']);
-                Route::post('order/{id}', ['as' => 'order', 'uses' => 'MachineImageController@order']);
-                Route::post('store', ['as' => 'store', 'uses' => 'MachineImageController@store']);
-                Route::get('destroyGallery/{id}', ['as' => 'destroyGallery', 'uses' => 'MachineImageController@destroyAll']);
-            });
-
-            //FILES
-            Route::group(['prefix' => 'file', 'as' => 'file.'], function () {
-                Route::get('/{id}', ['as' => 'index', 'uses' => 'MachineFileController@index']);
-                Route::get('create/{id}', ['as' => 'create', 'uses' => 'MachineFileController@create']);
-                Route::post('store', ['as' => 'store', 'uses' => 'MachineFileController@store']);
-                Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'MachineFileController@edit']);
-                Route::post('update/{id}', ['as' => 'update', 'uses' => 'MachineFileController@update']);
-                Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'MachineFileController@destroy']);
-                Route::get('active/{id}', ['as' => 'active', 'uses' => 'MachineFileController@active']);
-                Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'MachineFileController@destroyFile']);
-            });
-
-        });
-
-        //CATEGORY
-        Route::group(['prefix' => 'category', 'as' => 'category.'], function () {
-            Route::get('/', ['as' => 'index', 'uses' => 'CategoryMachineController@index']);
-            Route::get('create', ['as' => 'create', 'uses' => 'CategoryMachineController@create']);
-            Route::post('store', ['as' => 'store', 'uses' => 'CategoryMachineController@store']);
-            Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'CategoryMachineController@edit']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'CategoryMachineController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'CategoryMachineController@destroy']);
-            Route::get('active/{id}', ['as' => 'active', 'uses' => 'CategoryMachineController@active']);
-        });
-    });
-
-
-    //PARTS
-    Route::group(['prefix' => 'part', 'as' => 'part.', 'namespace' => 'Part'], function () {
-
-        //PARTS
-        Route::group(['prefix' => 'part', 'as' => 'part.'], function () {
-            Route::get('', ['as' => 'index', 'uses' => 'PartController@index']);
-            Route::get('create', ['as' => 'create', 'uses' => 'PartController@create']);
-            Route::post('store', ['as' => 'store', 'uses' => 'PartController@store']);
-            Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'PartController@edit']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'PartController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'PartController@destroy']);
-            Route::get('active/{id}', ['as' => 'active', 'uses' => 'PartController@active']);
-            Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'PartController@destroyFile']);
-        });
-
-        //CATEGORY
-        Route::group(['prefix' => 'category', 'as' => 'category.'], function () {
-            Route::get('/', ['as' => 'index', 'uses' => 'CategoryPartController@index']);
-            Route::get('create', ['as' => 'create', 'uses' => 'CategoryPartController@create']);
-            Route::post('store', ['as' => 'store', 'uses' => 'CategoryPartController@store']);
-            Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'CategoryPartController@edit']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'CategoryPartController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'CategoryPartController@destroy']);
-            Route::get('active/{id}', ['as' => 'active', 'uses' => 'CategoryPartController@active']);
-        });
-
-        //CONTACT
-        Route::group(['prefix' => 'contact', 'as' => 'contact.'], function () {
-            Route::get('', ['as' => 'index', 'uses' => 'PartContactController@index']);
-            Route::get('show/{id}', ['as' => 'show', 'uses' => 'PartContactController@show']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'PartContactController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'PartContactController@destroy']);
-            Route::get('destroyAllMessages', ['as' => 'destroyAllMessages', 'uses' => 'PartContactController@destroyAllMessages']);
-            Route::get('export', ['as' => 'export', 'uses' => 'PartContactController@export']);
-        });
-
-    });
-
-    //CONSTRUCITONS
-    Route::group(['prefix' => 'construction', 'as' => 'construction.', 'namespace' => 'Construction'], function () {
-        Route::get('', ['as' => 'index', 'uses' => 'ConstructionController@index']);
-        Route::get('create', ['as' => 'create', 'uses' => 'ConstructionController@create']);
-        Route::post('store', ['as' => 'store', 'uses' => 'ConstructionController@store']);
-        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'ConstructionController@edit']);
-        Route::post('update/{id}', ['as' => 'update', 'uses' => 'ConstructionController@update']);
-        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'ConstructionController@destroy']);
-        Route::get('active/{id}', ['as' => 'active', 'uses' => 'ConstructionController@active']);
-
-        //GALERY
-        Route::group(['prefix' => 'gallery', 'as' => 'gallery.'], function () {
-            Route::get('{id}', ['as' => 'index', 'uses' => 'ConstructionImageController@index']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'ConstructionImageController@destroy']);
-            Route::post('upload/{id}', ['as' => 'upload', 'uses' => 'ConstructionImageController@upload']);
-            Route::post('updateLabel/{id}', ['as' => 'updateLabel', 'uses' => 'ConstructionImageController@updateLabel']);
-            Route::post('cover/{id}', ['as' => 'cover', 'uses' => 'ConstructionImageController@cover']);
-            Route::post('order/{id}', ['as' => 'order', 'uses' => 'ConstructionImageController@order']);
-            Route::post('store', ['as' => 'store', 'uses' => 'ConstructionImageController@store']);
-            Route::get('destroyGallery/{id}', ['as' => 'destroyGallery', 'uses' => 'ConstructionImageController@destroyAll']);
-        });
-    });
-
-    //CLIENTS
-    Route::group(['prefix' => 'client', 'as' => 'client.', 'namespace' => 'Client'], function () {
-        Route::get('', ['as' => 'index', 'uses' => 'ClientController@index']);
-        Route::get('create', ['as' => 'create', 'uses' => 'ClientController@create']);
-        Route::post('store', ['as' => 'store', 'uses' => 'ClientController@store']);
-        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'ClientController@edit']);
-        Route::post('update/{id}', ['as' => 'update', 'uses' => 'ClientController@update']);
-        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'ClientController@destroy']);
-        Route::get('active/{id}', ['as' => 'active', 'uses' => 'ClientController@active']);
-        Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'ClientController@destroyFile']);
-    });
-
-    //PARTNER
-    Route::group(['prefix' => 'partner', 'as' => 'partner.', 'namespace' => 'Partner'], function () {
-        Route::get('', ['as' => 'index', 'uses' => 'PartnerController@index']);
-        Route::get('show/{id}', ['as' => 'show', 'uses' => 'PartnerController@show']);
-        Route::get('export', ['as' => 'export', 'uses' => 'PartnerController@export']);
-        Route::get('exportAll', ['as' => 'exportAll', 'uses' => 'PartnerController@exportAll']);
-        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'PartnerController@destroy']);
-    });
-
-    //LANDING PAGE
-    Route::group(['prefix' => 'landing-page', 'as' => 'landing-page.', 'namespace' => 'LandingPage'], function () {
-
-        Route::get('', ['as' => 'index', 'uses' => 'LandingPageController@index']);
-        Route::get('create', ['as' => 'create', 'uses' => 'LandingPageController@create']);
-        Route::post('store', ['as' => 'store', 'uses' => 'LandingPageController@store']);
-        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'LandingPageController@edit']);
-        Route::post('update/{id}', ['as' => 'update', 'uses' => 'LandingPageController@update']);
-        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'LandingPageController@destroy']);
-        Route::get('active/{id}', ['as' => 'active', 'uses' => 'LandingPageController@active']);
-        Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'LandingPageController@destroyFile']);
-
-        //PRODUCT
-        Route::group(['prefix' => 'product', 'as' => 'product.'], function () {
-            Route::get('/{id}', ['as' => 'index', 'uses' => 'LandingPageProductController@index']);
-            Route::get('create/{id}', ['as' => 'create', 'uses' => 'LandingPageProductController@create']);
-            Route::post('store', ['as' => 'store', 'uses' => 'LandingPageProductController@store']);
-            Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'LandingPageProductController@edit']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'LandingPageProductController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'LandingPageProductController@destroy']);
-            Route::get('active/{id}', ['as' => 'active', 'uses' => 'LandingPageProductController@active']);
-            Route::get('destroyFile/{id}/{name}', ['as' => 'destroyFile', 'uses' => 'LandingPageProductController@destroyFile']);
-        });
-
-        //CONTACT
-        Route::group(['prefix' => 'contact', 'as' => 'contact.'], function () {
-            Route::get('', ['as' => 'all', 'uses' => 'LandingPageContactController@all']);
-            Route::get('{id}', ['as' => 'index', 'uses' => 'LandingPageContactController@index']);
-            Route::get('show/{id}', ['as' => 'show', 'uses' => 'LandingPageContactController@show']);
-            Route::get('export/{id}', ['as' => 'export', 'uses' => 'LandingPageContactController@export']);
-            Route::get('exportAll', ['as' => 'exportAll', 'uses' => 'LandingPageContactController@exportAll']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'LandingPageContactController@destroy']);
-        });
-
-        //CONFIGURATIONS
-        Route::group(['prefix' => 'configuration', 'as' => 'configuration.'], function () {
-            Route::get('', ['as' => 'index', 'uses' => 'LandingPageConfigurationController@index']);
-            Route::get('create', ['as' => 'create', 'uses' => 'LandingPageConfigurationController@create']);
-            Route::post('store', ['as' => 'store', 'uses' => 'LandingPageConfigurationController@store']);
-            Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'LandingPageConfigurationController@edit']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'LandingPageConfigurationController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'LandingPageConfigurationController@destroy']);
-        });
-    });
-
-    //TIME LINE
-    Route::group(['prefix' => 'time-line', 'as' => 'time-line.', 'namespace' => 'TimeLine'], function () {
-        Route::get('', ['as' => 'index', 'uses' => 'ClientController@index']);
-        Route::get('create', ['as' => 'create', 'uses' => 'ClientController@create']);
-        Route::post('store', ['as' => 'store', 'uses' => 'ClientController@store']);
-        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'ClientController@edit']);
-        Route::post('update/{id}', ['as' => 'update', 'uses' => 'ClientController@update']);
-        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'ClientController@destroy']);
-        Route::get('active/{id}', ['as' => 'active', 'uses' => 'ClientController@active']);
     });
 
     //BLOG
@@ -490,14 +180,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
                 Route::post('order/{id}', ['as' => 'order', 'uses' => 'PostImageController@order']);
                 Route::post('store', ['as' => 'store', 'uses' => 'PostImageController@store']);
             });
-
-            //SERVICES
-            Route::group(['prefix' => 'services', 'as' => 'services.'], function () {
-                Route::get('{id}', ['as' => 'index', 'uses' => 'PostServiceController@index']);
-                Route::post('store', ['as' => 'store', 'uses' => 'PostServiceController@store']);
-                Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'PostServiceController@destroy']);
-            });
-
         });
     });
 
@@ -519,84 +201,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
         Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'ContactController@destroy']);
         Route::get('destroyAllMessages', ['as' => 'destroyAllMessages', 'uses' => 'ContactController@destroyAllMessages']);
         Route::get('export', ['as' => 'export', 'uses' => 'ContactController@export']);
-    });
-
-    //BUDGET
-    Route::group(['prefix' => 'budget', 'as' => 'budget.', 'namespace' => 'Budget'], function () {
-        Route::get('', ['as' => 'index', 'uses' => 'BudgetController@index']);
-        Route::get('show/{id}', ['as' => 'show', 'uses' => 'BudgetController@show']);
-        Route::post('update/{id}', ['as' => 'update', 'uses' => 'BudgetController@update']);
-        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'BudgetController@destroy']);
-        Route::get('destroyAllMessages', ['as' => 'destroyAllMessages', 'uses' => 'BudgetController@destroyAllMessages']);
-        Route::get('export', ['as' => 'export', 'uses' => 'BudgetController@export']);
-    });
-
-    //WORK
-    Route::group(['prefix' => 'work', 'as' => 'work.', 'namespace' => 'Work'], function () {
-        Route::get('', ['as' => 'index', 'uses' => 'WorkController@index']);
-        Route::get('show/{id}', ['as' => 'show', 'uses' => 'WorkController@show']);
-        Route::post('update/{id}', ['as' => 'update', 'uses' => 'WorkController@update']);
-        Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'WorkController@destroy']);
-        Route::get('destroyAllMessages', ['as' => 'destroyAllMessages', 'uses' => 'WorkController@destroyAllMessages']);
-        Route::get('export', ['as' => 'export', 'uses' => 'WorkController@export']);
-    });
-
-    //TECHNICAL ASSISTANCES
-    Route::group(['prefix' => 'technical-assistance', 'as' => 'technical-assistance.', 'namespace' => 'TechnicalAssistance'], function () {
-
-        //TECHNICAL ASSISTANCES
-        Route::group(['prefix' => 'technical-assistance', 'as' => 'technical-assistance.'], function () {
-            Route::get('', ['as' => 'index', 'uses' => 'TechnicalAssistanceController@index']);
-            Route::get('show/{id}', ['as' => 'show', 'uses' => 'TechnicalAssistanceController@show']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'TechnicalAssistanceController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'TechnicalAssistanceController@destroy']);
-            Route::get('destroyAllMessages', ['as' => 'destroyAllMessages', 'uses' => 'TechnicalAssistanceController@destroyAllMessages']);
-            Route::get('export', ['as' => 'export', 'uses' => 'TechnicalAssistanceController@export']);
-        });
-
-        //TYPE PRODUCTS
-        Route::group(['prefix' => 'type-product', 'as' => 'type-product.'], function () {
-            Route::get('', ['as' => 'index', 'uses' => 'TypeProductController@index']);
-            Route::get('create', ['as' => 'create', 'uses' => 'TypeProductController@create']);
-            Route::post('store', ['as' => 'store', 'uses' => 'TypeProductController@store']);
-            Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'TypeProductController@edit']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'TypeProductController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'TypeProductController@destroy']);
-            Route::get('active/{id}', ['as' => 'active', 'uses' => 'TypeProductController@active']);
-        });
-
-        //FLUIDS
-        Route::group(['prefix' => 'fluid', 'as' => 'fluid.'], function () {
-            Route::get('', ['as' => 'index', 'uses' => 'FluidController@index']);
-            Route::get('create', ['as' => 'create', 'uses' => 'FluidController@create']);
-            Route::post('store', ['as' => 'store', 'uses' => 'FluidController@store']);
-            Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'FluidController@edit']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'FluidController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'FluidController@destroy']);
-            Route::get('active/{id}', ['as' => 'active', 'uses' => 'FluidController@active']);
-        });
-
-        //COMPONENTS
-        Route::group(['prefix' => 'component', 'as' => 'component.'], function () {
-            Route::get('', ['as' => 'index', 'uses' => 'ComponentController@index']);
-            Route::get('create', ['as' => 'create', 'uses' => 'ComponentController@create']);
-            Route::post('store', ['as' => 'store', 'uses' => 'ComponentController@store']);
-            Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'ComponentController@edit']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'ComponentController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'ComponentController@destroy']);
-            Route::get('active/{id}', ['as' => 'active', 'uses' => 'ComponentController@active']);
-        });
-
-        //DEFECTS
-        Route::group(['prefix' => 'defect', 'as' => 'defect.'], function () {
-            Route::get('', ['as' => 'index', 'uses' => 'DefectController@index']);
-            Route::get('create', ['as' => 'create', 'uses' => 'DefectController@create']);
-            Route::post('store', ['as' => 'store', 'uses' => 'DefectController@store']);
-            Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'DefectController@edit']);
-            Route::post('update/{id}', ['as' => 'update', 'uses' => 'DefectController@update']);
-            Route::get('destroy/{id}', ['as' => 'destroy', 'uses' => 'DefectController@destroy']);
-            Route::get('active/{id}', ['as' => 'active', 'uses' => 'DefectController@active']);
-        });
     });
 
     //CONFIGURATIONS

@@ -123,12 +123,12 @@
                             </a>
                         </li>
                         <li>
-                            <a @if($ativo == 'servicos') class="active" @endif href="{{ route('service') }}" title="Serviços">
+                            <a @if($ativo == 'servicos' || $ativo == 'servicos/{seo_link}') class="active" @endif href="{{ route('service') }}" title="Serviços">
                                 Serviços
                             </a>
                         </li>
                         <li>
-                            <a href="" title="Tipos de Fisio">
+                            <a @if($ativo == 'tipos-fisio' || $ativo == 'tipos-fisio/{seo_link}') class="active" @endif href="{{ route('type') }}" title="Tipos de Fisio">
                                 Tipos de Fisio
                             </a>
                         </li>

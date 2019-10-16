@@ -19,8 +19,9 @@ class ContactValidator extends LaravelValidator
      */
     protected $rules = [
         ValidatorInterface::RULE_CREATE => [
-            'name' => 'required|min:3|max:255',
-            'phone' => 'required|min:3|max:255',
+            'service_id' => 'required|exists:services,id',
+            'name' => 'required|min:3|max:191',
+            'phone' => 'required|min:3|max:191',
             'email' => 'required|email',
             'message' => 'required',
             'view' => 'required',
@@ -28,6 +29,7 @@ class ContactValidator extends LaravelValidator
             'ip' => 'required'
         ],
         ValidatorInterface::RULE_UPDATE => [
+            'service_id' => 'required|exists:services,id',
             'name' => 'required|min:3|max:255',
             'phone' => 'required|min:3|max:255',
             'email' => 'required|email',

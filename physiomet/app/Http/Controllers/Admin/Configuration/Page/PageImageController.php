@@ -37,9 +37,19 @@ class PageImageController extends Controller
         $config['galery'] = true;
         $routeUpload = route('admin.configuration.page.gallery.upload', ['id' => $id]);
 
+        if ($id == 1) {
+            $config['activeMenu'] = 'about';
+        }
+        $config['activeMenuN2'] = 'page-' . $id;
+
+        $imageSize = 'xx X xx';
+        if ($id == 1) {
+            $imageSize = '650px X 490px';
+        }
+
         $dados = $this->repository->orderBy('order', 'asc')->findWhere(['page_id' => $id]);
 
-        return view('admin.configuration.page.gallery.index', compact('dados', 'id', 'config', 'routeUpload'));
+        return view('admin.configuration.page.gallery.index', compact('dados', 'id', 'config', 'routeUpload', 'imageSize'));
     }
 
     public function header()
@@ -118,7 +128,7 @@ class PageImageController extends Controller
 
     public function destroy($id)
     {
-        if($this->destroyImage($id)) {
+        if ($this->destroyImage($id)) {
             $deleted = $this->repository->delete($id);
             return redirect()->back()->with('success', 'Registro removido com sucesso!');
         }
