@@ -19,7 +19,6 @@ class SiteMapController extends Controller
 
     protected $typeRepository;
 
-
     public function __construct(TagRepository $tagRepository,
                                 PostRepository $postRepository,
                                 ServiceRepository $serviceRepository,

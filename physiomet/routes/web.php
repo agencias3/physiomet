@@ -12,7 +12,6 @@ include('admin.php');
 |
 */
 
-
 //LANDING PAGE / CAMPANHA
 Route::group(['prefix' => 'campanha', 'as' => 'landing-page.', 'namespace' => 'LandingPage'], function () {
     Route::get('/', 'LandingPageController@index')->name('index');
