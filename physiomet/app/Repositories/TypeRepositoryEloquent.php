@@ -2,19 +2,23 @@
 
 namespace AgenciaS3\Repositories;
 
+use Prettus\Repository\Contracts\CacheableInterface;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 use AgenciaS3\Repositories\TypeRepository;
 use AgenciaS3\Entities\Type;
 use AgenciaS3\Validators\TypeValidator;
+use Prettus\Repository\Traits\CacheableRepository;
 
 /**
  * Class TypeRepositoryEloquent.
  *
  * @package namespace AgenciaS3\Repositories;
  */
-class TypeRepositoryEloquent extends BaseRepository implements TypeRepository
+class TypeRepositoryEloquent extends BaseRepository implements TypeRepository, CacheableInterface
 {
+
+    use CacheableRepository;
 
     public function getActive($limit)
     {

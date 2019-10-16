@@ -3,19 +3,23 @@
 namespace AgenciaS3\Repositories;
 
 use Carbon\Carbon;
+use Prettus\Repository\Contracts\CacheableInterface;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 use AgenciaS3\Repositories\ServiceRepository;
 use AgenciaS3\Entities\Service;
 use AgenciaS3\Validators\ServiceValidator;
+use Prettus\Repository\Traits\CacheableRepository;
 
 /**
  * Class ServiceRepositoryEloquent.
  *
  * @package namespace AgenciaS3\Repositories;
  */
-class ServiceRepositoryEloquent extends BaseRepository implements ServiceRepository
+class ServiceRepositoryEloquent extends BaseRepository implements ServiceRepository, CacheableInterface
 {
+
+    use CacheableRepository;
 
     public function getPostsActive($limit)
     {

@@ -2,19 +2,23 @@
 
 namespace AgenciaS3\Repositories;
 
+use Prettus\Repository\Contracts\CacheableInterface;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 use AgenciaS3\Repositories\CovenantRepository;
 use AgenciaS3\Entities\Covenant;
 use AgenciaS3\Validators\CovenantValidator;
+use Prettus\Repository\Traits\CacheableRepository;
 
 /**
  * Class CovenantRepositoryEloquent.
  *
  * @package namespace AgenciaS3\Repositories;
  */
-class CovenantRepositoryEloquent extends BaseRepository implements CovenantRepository
+class CovenantRepositoryEloquent extends BaseRepository implements CovenantRepository, CacheableInterface
 {
+    use CacheableRepository;
+
     /**
      * Specify Model class name
      *
